@@ -5,13 +5,17 @@
 body {
 	margin-top: -15px;
 	background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 #table {
-	margin-top: 150px;
+	margin-top: 200px;
 	margin-right: auto;
 	margin-left: auto;
 	border: none;
-	width: 1200px;
+	width: 85%;
 	overflow: hidden;
 	color: #6E6D62;
 	font: 9pt helvetica;
@@ -21,29 +25,28 @@ body {
 	padding-right: 10px;
 	text-align: justify;
 	background: none;
+	
 }
-.pet_list {
+
+.gallery {
+    columns: 4;
+    column-gap: 10PX;
+    width: 100%;
+    margin: 0 auto;
+    display: inline-block;
 	list-style: none;
-	width: 100%;
 	overflow: hidden;
+	
 }
-.pet_list li {
-	margin: 15px;
-	float: left;
-	height: 310px;
-	border: none;
-}
-.pet_list img {
+.gallery img {
+    
+	position: relative;
 	background: none;
 	border: 1px solid #ffffff;
-	height: 300px;
-	margin-bottom: 50px;
+	width: 95%;
+	margin: 5px;
 }
-a.pet {
-	border: none;
-	display: inline-block;
-	text-decoration: none;
-}
+
 a:link, a:active, a:visited, a, a b {
 	color: #ffffff;
 }
@@ -96,31 +99,32 @@ a.navtab {
 	letter-spacing: -0.5pt;
 	font-style: italic;
 	padding: none;
+	
 }
+
+
 </style><a name="top"></a>
 
 
 <div class="header"><p class="h2"><b> Luck Capsule </b></p>
-<div class="navtab">
+<div class="navtab"> <center>
 <a href="#top" class="navtab">home</a>
 
-<a href="#a" class="navtab">original</a>
+<a href="#a" class="navtab">gallery</a>
 
-<a href="#b" class="navtab">fanart</a>
+<a href="#b" class="navtab">commissions</a>
 
-<a href="#c" class="navtab">x</a>
+<a href="#c" class="navtab">contact</a>
+</center>
 <br><BR>
 </div>
 </div>
 <div id="table">
-<BR><BR><BR>
-WIP portfolio<br><br>
-<div style="position: fixed; float: left; z-index: 100; top: 100px; left: 10px;">
-</div>
-
-<a name="a"></a><ul class="pet_list"><p class="h1">Original </p>
 
 
+<a name="a"></a><p class="h1">Original </p>
+
+<ul class="gallery">
 <li>
 <img src="https://i.imgur.com/jnkzDt0.png"></li>
 
@@ -151,10 +155,9 @@ WIP portfolio<br><br>
 
 
 
-
 </ul><a name="b"></a>
-<ul class="pet_list"><br><p class="h1">Fan Art </p>
-
+<br><br><p class="h1">Fan Art </p>
+<ul class="gallery">
 
 <li>
 <img src="https://i.imgur.com/Ra9wrmi.png"></li>
