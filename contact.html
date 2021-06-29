@@ -1,152 +1,134 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2022.5">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #000000; -webkit-text-stroke: #000000}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
-    span.s1 {font-kerning: none}
-    span.Apple-tab-span {white-space:pre}
-  </style>
-</head>
-<body>
-<p class="p1"><span class="s1">&lt;style&gt;</span></p>
-<p class="p1"><span class="s1">.sf {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>display: none;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1">body {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>margin-top: -15px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>background: #fff;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>display: flex;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>justify-content: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>align-items: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>flex-direction: column;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1">#table {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>margin-top: 200px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>margin-right: auto;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>margin-left: auto;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>border: none;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>width: 85%;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>overflow: hidden;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>color: #6E6D62;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>font: 9pt helvetica;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>line-height: 18pt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>letter-spacing: 1px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>padding-left: 10px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>padding-right: 10px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>text-align: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>background: none;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-tab-span">	</span></span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">.gallery {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>columns: 4;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>column-gap: 10PX;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>width: 100%;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin: 0 auto;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display: inline-block;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>list-style: none;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>overflow: hidden;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-tab-span">	</span></span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1">.gallery img {</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>position: relative;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>background: none;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>border: 1px solid #ffffff;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>width: 95%;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>margin: 5px;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">a:link, a:active, a:visited, a, a b {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>color: #e8abb2;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>text-decoration: none;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">a.navtab {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>border-radius: 13px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>display: inline-block;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>color: #4f4f4f;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>width: 100px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>border: 1px solid #4f4f4f;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>background: #ffffff;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>font-size: 11px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>font-family: 'inconsolata','andale mono';</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>letter-spacing: 1.5px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>text-transform: uppercase;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>text-align: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>text-decoration: none;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>padding: 3px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>margin: 10px;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">.header {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>position: fixed;<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>z-index: 100;<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>top: 0px;<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>left: 0px;<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>width: 100%;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background: url("f") repeat fixed;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background: linear-gradient(to bottom, #fce3e6,<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>#fce3e6 0%, #fce3e6 15%, #fce3e6 25%, #fce3e6 25%, #fce3e6 35%, #fce3e6 35%, #fce3e6 50%, #fce3e6 65%, #fce3e6 65%, #fce3e6 75%, #fce3e6 75%, transparent 99%);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 10px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-bottom: 0px solid #696969;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>text-align: justify;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">.h1 {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>text-align: left;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>font-size: 15pt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>color: #8a8a8a;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>line-height: 7px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>letter-spacing: 1.5px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>font-family: 'inconsolata','andale mono';</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1">.h2 {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>text-align: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>font-size: 30pt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>line-height: 10px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>color: #8a8a8a;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>font-family: georgia;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>letter-spacing: -0.5pt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>font-style: italic;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-tab-span">	</span>padding: none;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-tab-span">	</span></span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;/style&gt;&lt;a name="top"&gt;&lt;/a&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;div class="header"&gt;&lt;p class="h2"&gt;&lt;b&gt; Luck Capsule &lt;/b&gt;&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">&lt;div class="navtab"&gt; &lt;center&gt;</span></p>
-<p class="p1"><span class="s1">&lt;a href="#top" class="navtab"&gt;home&lt;/a&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;a href="#a" class="navtab"&gt;gallery&lt;/a&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;a href="#b" class="navtab"&gt;commissions&lt;/a&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;a href="#c" class="navtab"&gt;contact&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/center&gt;</span></p>
-<p class="p1"><span class="s1">&lt;br&gt;&lt;BR&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">&lt;div id="table"&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;a name="a"&gt;&lt;/a&gt;&lt;p class="h1"&gt;Contact and Socials &lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">&lt;center&gt;&lt;/center&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">Email: samirayeganegi@gmail.com</span></p>
-<p class="p1"><span class="s1">&lt;BR&gt;Twitter: &lt;a href=“https://twitter.com/luckcapsule"&gt;@luckcapsule&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1">&lt;BR&gt;Instagram: &lt;a href=“https://www.instagram.com/luckcapsule"&gt;@luckcapsule&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1">&lt;BR&gt;Artfol: @capsule&lt;/a&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/center&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
-</body>
-</html>
+<style>
+.sf {
+	display: none;
+}
+body {
+	margin-top: -15px;
+	background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#table {
+	margin-top: 200px;
+	margin-right: auto;
+	margin-left: auto;
+	border: none;
+	width: 85%;
+	overflow: hidden;
+	color: #6E6D62;
+	font: 9pt helvetica;
+	line-height: 18pt;
+	letter-spacing: 1px;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: center;
+	background: none;
+	
+}
+
+.gallery {
+    columns: 4;
+    column-gap: 10PX;
+    width: 100%;
+    margin: 0 auto;
+    display: inline-block;
+	list-style: none;
+	overflow: hidden;
+	
+}
+.gallery img {
+    
+	position: relative;
+	background: none;
+	border: 1px solid #ffffff;
+	width: 95%;
+	margin: 5px;
+}
+
+a:link, a:active, a:visited, a, a b {
+	color: #e8abb2;
+	text-decoration: none;
+}
+
+a.navtab {
+	border-radius: 13px;
+	display: inline-block;
+	color: #4f4f4f;
+	width: 100px;
+	border: 1px solid #4f4f4f;
+	background: #ffffff;
+	font-size: 11px;
+	font-family: 'inconsolata','andale mono';
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	text-align: center;
+	text-decoration: none;
+	padding: 3px;
+	margin: 10px;
+}
+
+.header {
+    position: fixed; 
+    z-index: 100; 
+    top: 0px; 
+    left: 0px; 
+    width: 100%;
+    background: url("f") repeat fixed;
+    background: linear-gradient(to bottom, #fce3e6, 
+    #fce3e6 0%, #fce3e6 15%, #fce3e6 25%, #fce3e6 25%, #fce3e6 35%, #fce3e6 35%, #fce3e6 50%, #fce3e6 65%, #fce3e6 65%, #fce3e6 75%, #fce3e6 75%, transparent 99%);
+    padding: 10px;
+    border-bottom: 0px solid #696969;
+	text-align: justify;
+}
+
+.h1 {
+	text-align: left;
+	font-size: 15pt;
+	color: #8a8a8a;
+	line-height: 7px;
+	letter-spacing: 1.5px;
+	font-family: 'inconsolata','andale mono';
+}
+.h2 {
+	text-align: center;
+	font-size: 30pt;
+	line-height: 10px;
+	color: #8a8a8a;
+	font-family: georgia;
+	letter-spacing: -0.5pt;
+	font-style: italic;
+	padding: none;
+	
+}
+
+
+</style><a name="top"></a>
+
+
+<div class="header"><p class="h2"><b> Luck Capsule </b></p>
+<div class="navtab"> <center>
+<a href="#top" class="navtab">home</a>
+
+<a href="/index" class="navtab">gallery</a>
+
+<a href="#b" class="navtab">commissions</a>
+
+<a href="#c" class="navtab">contact</a>
+</center>
+<br><BR>
+</div>
+</div>
+<div id="table">
+
+
+<a name="a"></a><p class="h1">Contact and Socials </p>
+<center></center>
+
+Email: samirayeganegi@gmail.com
+<BR>Twitter: <a href=“https://twitter.com/luckcapsule">@luckcapsule</a>
+<BR>Instagram: <a href=“https://www.instagram.com/luckcapsule">@luckcapsule</a>
+<BR>Artfol: @capsule</a>
+</center>
+</div>
