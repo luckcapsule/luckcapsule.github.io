@@ -1,0 +1,1 @@
+# luckcapsule.github.io
