@@ -1,130 +1,221 @@
+
+
 <style>
 
+
 body {
-	margin-top: -15px;
-	background: #fff;
+
+    background: #fff;
+
   display: flex;
+
   justify-content: center;
+
   align-items: center;
+
   flex-direction: column;
 }
-#table {
-	margin-top: 200px;
-	margin-right: auto;
-	margin-left: auto;
-	border: none;
-	width: 85%;
-	overflow: hidden;
-	color: #6E6D62;
-	font-family: Helvetica,Arial,sans-serif;
-	font-size: 9pt;
-	line-height: 18pt;
-	letter-spacing: 1px;
-	padding-left: 10px;
-	padding-right: 10px;
-	text-align: justify;
-	background: none;
-	
+
+#socials {
+    z-index: 500;
+    position:fixed;
+    top: 20px;
+    right: 20px;
+    width: 120px;
 }
 
-.gallery {
-    columns: 4;
-    column-gap: 10PX;
-    width: 100%;
-    margin: 0 auto;
-    display: inline-block;
-	list-style: none;
-	overflow: hidden;
-	
+#socials img {
+    height: 25px;
+    padding:5px;
 }
-.gallery img {
+
+
+#table {
+
+    top: 200px;
+    bottom: 10px;
     
-	position: relative;
-	background: none;
-	border: 1px solid #ffffff;
-	width: 95%;
-	margin: 5px;
+    position:fixed;
+
+    margin-right: auto;
+
+    margin-left: auto;
+
+    border: none;
+
+    width: 80%;
+
+    overflow: hidden;
+
+    color: #6E6D62;
+
+    font-family: Helvetica,Arial,sans-serif;
+    
+    font-size: 9pt;
+    
+    line-height: 18pt;
+
+    letter-spacing: 1px;
+
+    padding-left: 10px;
+
+    padding-right: 10px;
+
+    text-align: justify;
+
+    background: none;
+
+
 }
+
+
+
 
 a:link, a:active, a:visited, a, a b {
-	color: #e8abb2;
-	text-decoration: none;
+
+    color: #e8abb2;
+
+    text-decoration: none;
+
 }
 
+
 a.navtab {
-	border-radius: 13px;
-	display: inline-block;
-	color: #4f4f4f;
-	width: 100px;
-	border: 1px solid #4f4f4f;
-	background: #ffffff;
-	font-size: 11px;
-	font-family: 'inconsolata','andale mono','Lucida Console','verdana';
-	letter-spacing: 1.5px;
-	text-transform: uppercase;
-	text-align: center;
-	text-decoration: none;
-	padding: 3px;
-	margin: 10px;
+
+    border-radius: 13px;
+
+    display: inline-block;
+
+    color: #4f4f4f;
+
+    width: 150px;
+
+    border: 1px solid #4f4f4f;
+
+    background: rgba(255, 255, 255, 1) ;
+
+    font-size: 13px;
+
+    font-family: 'inconsolata','andale mono','Lucida Console','verdana';
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    padding: 3px;
+
+    margin: 10px;
+
 }
 
 a.navtab:hover {
     color: #adadad;
-	border: 1px solid #adadad;
+    border: 1px solid #adadad;
 }
 
 .header {
-    position: fixed; 
-    z-index: 100; 
-    top: 0px; 
-    left: 0px; 
+
+    position: fixed;
+
+    z-index: 100;
+
+    top: 0px;
+
+    left: 0px;
+
     width: 100%;
+
     background: url("f") repeat fixed;
-    background: linear-gradient(to bottom, #fce3e6, 
+
+    background: linear-gradient(to bottom, #fce3e6,
+
     #fce3e6 0%, #fce3e6 15%, #fce3e6 25%, #fce3e6 25%, #fce3e6 35%, #fce3e6 35%, #fce3e6 50%, #fce3e6 65%, #fce3e6 65%, #fce3e6 75%, #fce3e6 75%, transparent 99%);
+
     padding: 10px;
+
     border-bottom: 0px solid #696969;
-	text-align: justify;
+
+    text-align: justify;
+
 }
+
 
 .h1 {
-	text-align: left;
-	font-size: 15pt;
-	color: #8a8a8a;
-	line-height: 7px;
-	letter-spacing: 1.5px;
-	font-family:  'inconsolata','andale mono','Lucida Console', 'monospace';
-    
+    border-bottom: 2px dashed #fce3e6;
+
+    text-align: left;
+
+    font-size: 18pt;
+
+    color: #8a8a8a;
+
+    line-height: 10px;
+
+    letter-spacing: 1.5px;
+
+    font-family: 'courier', 'inconsolata','andale mono','Lucida Console', 'monospace';
+
 }
+
 .h2 {
-	text-align: center;
-	font-size: 30pt;
-	line-height: 10px;
-	color: #8a8a8a;
-	font-family: georgia;
-	letter-spacing: -0.5pt;
-	font-style: italic;
-	padding: none;
-	
+
+    text-align: center;
+
+    font-size: 32pt;
+
+    line-height: 10px;
+
+    color: #8a8a8a;
+
+    font-family: 'georgia';
+
+    letter-spacing: -0.5pt;
+
+    font-style: italic;
+
+    padding: none;
+
+    
+
 }
 
+</style>
+<div id="socials">
+    <a href="https://twitter.com/luckcapsule"><img src="https://i.imgur.com/XYIHrWm.png"></a>  
+    <a href="https://www.instagram.com/luckcapsule/"><img src="https://i.imgur.com/9bMiU04.png"></a>
+    <a href="https://www.twitch.tv/luckcapsule"><img src="https://i.imgur.com/rIwRZ1L.png"></a>
+    </div>
+<a name="top"></a>
 
-</style><a name="top"></a>
 
 
-<div class="header"><p class="h2"><b><a href="https://luckcapsule.com/"> Luck Capsule</a> </b></p>
+<div class="header"><p class="h2"><b><a href="/">Luck Capsule</a></b></p>
+
 <div class="navtab"> <center>
+
 <a href="/" class="navtab">home</a>
+
 
 <a href="/gallery" class="navtab">gallery</a>
 
+
 <a href="/commissions" class="navtab">commissions</a>
 
+
 <a href="/contact" class="navtab">contact</a>
+
 </center>
+
 <br><BR>
+
 </div>
+
 </div>
+
 <div id="table">
 
 <center>	<a href="/gallery"><img src="https://i.imgur.com/weXELqW.png" width=450px></a></center>
@@ -133,3 +224,8 @@ a.navtab:hover {
 <a name="c"></a>
 
 </div>
+
+
+
+
+
