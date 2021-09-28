@@ -5,9 +5,7 @@
 
 body {
 
-	margin-top: -15px;
-
-	background: #fff;
+    background: #fff;
 
   display: flex;
 
@@ -16,144 +14,203 @@ body {
   align-items: center;
 
   flex-direction: column;
-
 }
+
+#socials {
+    z-index: 500;
+    position:fixed;
+    top: 20px;
+    right: 20px;
+    width: 120px;
+}
+
+#socials img {
+    height: 25px;
+    padding:5px;
+}
+
 
 #table {
 
-	margin-top: 200px;
+    top: 200px;
+    bottom: 10px;
+    
+    position:fixed;
 
-	margin-right: auto;
+    margin-right: auto;
 
-	margin-left: auto;
+    margin-left: auto;
 
-	border: none;
+    border: none;
 
-	width: 85%;
+    width: 80%;
 
-	overflow: hidden;
+    overflow: hidden;
 
-	color: #6E6D62;
+    color: #6E6D62;
 
-	font-family: Helvetica,Arial,sans-serif;
-	
-	font-size: 9pt;
-	
-	line-height: 18pt;
+    font-family: Helvetica,Arial,sans-serif;
+    
+    font-size: 9pt;
+    
+    line-height: 18pt;
 
-	letter-spacing: 1px;
+    letter-spacing: 1px;
 
-	padding-left: 10px;
+    padding-left: 10px;
 
-	padding-right: 10px;
+    padding-right: 10px;
 
-	text-align: justify;
+    text-align: justify;
 
-	background: none;
+    background: none;
 
-	
 
 }
 
 
+#table1 {
+    
+height: 100%;
+
+    float: right;
+
+    width: 50%;
+    
+    overflow: hidden;
+    
+}
+
+.big {
+height: 100%;
+    margin-top:10px;
+    overflow: scroll;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;  
+}
+
+.big img{
+    box-shadow: 12px 12px 2px 1px rgba(232,171,178, .3);
+
+    border: 1px #8a8a8a outset;
+    height: 88%;
+}
+
+
+
+#galbox {
+    margin-top:10px;
+    height: 100%;
+    padding: none;
+    overflow: auto;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;  
+}
+
 .gallery {
 
-    columns: 4;
+    columns: 3;
 
-    column-gap: 10PX;
+    column-gap: 5PX;
+    
+    border: none;
 
-    width: 100%;
-
+    width: 75%;
+    
     margin: 0 auto;
 
     display: inline-block;
 
-	list-style: none;
+    list-style: none;
 
-	overflow: hidden;
+    overflow: hidden;
 
-	
 
 }
 
 .gallery img {
 
-    
 
-	position: relative;
+    position: relative;
 
-	background: none;
+    background: none;
 
-	border: 1px solid #ffffff;
+    border: 1px solid #ffff;
 
-	width: 95%;
+    width: 95%;
 
-	margin: 5px;
+    margin-right: 5px;
 
+    margin-bottom: 5px;
 }
+
+.gallery img:hover {
+    border: 1px solid #8a8a8a;
+}
+
 
 
 a:link, a:active, a:visited, a, a b {
 
-	color: #e8abb2;
+    color: #e8abb2;
 
-	text-decoration: none;
+    text-decoration: none;
 
 }
 
 
 a.navtab {
 
-	border-radius: 13px;
+    border-radius: 13px;
 
-	display: inline-block;
+    display: inline-block;
 
-	color: #4f4f4f;
+    color: #4f4f4f;
 
-	width: 100px;
+    width: 150px;
 
-	border: 1px solid #4f4f4f;
+    border: 1px solid #4f4f4f;
 
-	background: #ffffff;
+    background: rgba(255, 255, 255, 1) ;
 
-	font-size: 11px;
+    font-size: 13px;
 
-	font-family: 'inconsolata','andale mono','Lucida Console','verdana';
+    font-family: 'inconsolata','andale mono','Lucida Console','verdana';
 
-	letter-spacing: 1.5px;
+    letter-spacing: 1.5px;
 
-	text-transform: uppercase;
+    text-transform: uppercase;
 
-	text-align: center;
+    text-align: center;
 
-	text-decoration: none;
+    text-decoration: none;
 
-	padding: 3px;
+    padding: 3px;
 
-	margin: 10px;
+    margin: 10px;
 
 }
 
 a.navtab:hover {
     color: #adadad;
-	border: 1px solid #adadad;
+    border: 1px solid #adadad;
 }
 
 .header {
 
-    position: fixed; 
+    position: fixed;
 
-    z-index: 100; 
+    z-index: 100;
 
-    top: 0px; 
+    top: 0px;
 
-    left: 0px; 
+    left: 0px;
 
     width: 100%;
 
     background: url("f") repeat fixed;
 
-    background: linear-gradient(to bottom, #fce3e6, 
+    background: linear-gradient(to bottom, #fce3e6,
 
     #fce3e6 0%, #fce3e6 15%, #fce3e6 25%, #fce3e6 25%, #fce3e6 35%, #fce3e6 35%, #fce3e6 50%, #fce3e6 65%, #fce3e6 65%, #fce3e6 75%, #fce3e6 75%, transparent 99%);
 
@@ -161,52 +218,57 @@ a.navtab:hover {
 
     border-bottom: 0px solid #696969;
 
-	text-align: justify;
+    text-align: justify;
 
 }
 
 
 .h1 {
+    border-bottom: 2px dashed #fce3e6;
 
-	text-align: left;
+    text-align: left;
 
-	font-size: 13pt;
+    font-size: 18pt;
 
-	color: #8a8a8a;
+    color: #8a8a8a;
 
-	line-height: 7px;
+    line-height: 10px;
 
-	letter-spacing: 1.5px;
+    letter-spacing: 1.5px;
 
-	font-family:  'inconsolata','andale mono','Lucida Console', 'monospace';
+    font-family: 'courier', 'inconsolata','andale mono','Lucida Console', 'monospace';
 
 }
 
 .h2 {
 
-	text-align: center;
+    text-align: center;
 
-	font-size: 30pt;
+    font-size: 32pt;
 
-	line-height: 10px;
+    line-height: 10px;
 
-	color: #8a8a8a;
+    color: #8a8a8a;
 
-	font-family: 'georgia';
+    font-family: 'georgia';
 
-	letter-spacing: -0.5pt;
+    letter-spacing: -0.5pt;
 
-	font-style: italic;
+    font-style: italic;
 
-	padding: none;
+    padding: none;
 
-	
+    
 
 }
 
-
-
-</style><a name="top"></a>
+</style>
+<div id="socials">
+    <a href="https://twitter.com/luckcapsule"><img src="https://i.imgur.com/XYIHrWm.png"></a>  
+    <a href="https://www.instagram.com/luckcapsule/"><img src="https://i.imgur.com/9bMiU04.png"></a>
+    <a href="https://www.twitch.tv/luckcapsule"><img src="https://i.imgur.com/rIwRZ1L.png"></a>
+    </div>
+<a name="top"></a>
 
 
 
@@ -235,45 +297,128 @@ a.navtab:hover {
 
 <div id="table">
 
+<center></center>
+<div id="table1" >
+    
+    <div class="big">
+<a name="bun"></a><img src="https://i.imgur.com/T6TqLNp.png">
+</div>
+
+<div class="big">
+<a name="hearttank"></a><img src="https://i.imgur.com/jnkzDt0.png">
+</div>
+
+<div class="big">
+<a name="melan"></a><img src="https://i.imgur.com/U2Vj63x.png">
+</div>
+
+    <div class="big">
+<a name="floral"></a><img src="https://i.imgur.com/SZGpBjv.png">
+</div>
+
+    <div class="big">
+<a name="windy"></a><img src="https://i.imgur.com/bfJEcPs.png">
+</div>
+
+    <div class="big">
+<a name="stumble"></a><img src="https://i.imgur.com/1VSx8YB.png">
+</div>
+
+    <div class="big">
+<a name="pillow"></a><img src="https://i.imgur.com/QLYSKlr.png">
+</div>
 
 
+    <div class="big">
+<a name="mini"></a><img src="https://i.imgur.com/cEk6qNE.png">
+</div>
+
+    <div class="big">
+<a name="pigtail"></a><img src="https://i.imgur.com/15MpXYt.png">
+</div>
+
+
+    <div class="big">
+<a name="fauna"></a><img src="https://i.imgur.com/S0QVS9C.png">
+</div>
+
+    <div class="big">
+<a name="sousuke"></a><img src="https://i.imgur.com/lCamOEh.png"></a>
+</div>
+
+    <div class="big">
+<a name="manaka"></a><img src="https://i.imgur.com/Ra9wrmi.png"></a>
+</div>
+
+    <div class="big">
+<a name="venti"></a><img src="https://i.imgur.com/rYi3Rr2.png"></a>
+</div>
+
+    <div class="big">
+<a name="ai"></a><img src="https://i.imgur.com/rTKwgl9.png"></a>
+</div>
+
+    <div class="big">
+<a name="kenma"></a><img src="https://i.imgur.com/rJgIGH6.png"></a>
+</div>
+
+    <div class="big">
+<a name="dapperavi"></a><img src="https://i.imgur.com/oEXBg61.png">
+</div>
+
+    <div class="big">
+<a name="josh"></a><img src="https://i.imgur.com/2RYThZj.png"></a>
+</div>
+
+    <div class="big">
+<a name="paimon"></a><img src="https://i.imgur.com/0QXT9st.png"></a>
+</div>
+
+    <div class="big">
+<a name="xiangling"></a><img src="https://i.imgur.com/fClupf9.png">
+</div>
+
+
+
+    <BR><BR>
+
+ </center>
+ 
+</div>
+
+<div id="galbox">
 <a name="a"></a><p class="h1">Original </p>
 
 
 <ul class="gallery">
 
-
-<img src="https://i.imgur.com/jnkzDt0.png">
-
+<a href="#bun"><img src="https://i.imgur.com/T6TqLNp.png"></a>
 
 
-
-<img src="https://i.imgur.com/U2Vj63x.png">
-
-<img src="https://i.imgur.com/SZGpBjv.png">
+<a href="#hearttank"><img src="https://i.imgur.com/jnkzDt0.png"></a>
 
 
+<a href="#melan"><img src="https://i.imgur.com/U2Vj63x.png"></a>
 
-<img src="https://i.imgur.com/bfJEcPs.png">
-
-<img src="https://i.imgur.com/1VSx8YB.png">
+<a href="#floral"><img src="https://i.imgur.com/SZGpBjv.png"></a>
 
 
 
-<img src="https://i.imgur.com/QLYSKlr.png">
+<a href="#windy"><img src="https://i.imgur.com/bfJEcPs.png"></a>
+
+<a href="#stumble"><img src="https://i.imgur.com/1VSx8YB.png"></a>
 
 
 
-<img src="https://i.imgur.com/LzhHvAf.png">
+<a href="#pillow"><img src="https://i.imgur.com/QLYSKlr.png"></a>
 
 
 
-
-<img src="https://i.imgur.com/cEk6qNE.png">
-
+<a href="#mini"><img src="https://i.imgur.com/cEk6qNE.png"></a>
 
 
-<img src="https://i.imgur.com/15MpXYt.png">
+
+<a href="#pigtail"><img src="https://i.imgur.com/15MpXYt.png"></a>
 
 
 
@@ -285,45 +430,50 @@ a.navtab:hover {
 
 <ul class="gallery">
 
+<a href="#fauna"><img src="https://i.imgur.com/S0QVS9C.png"></a>
 
+<a href="#sousuke"><img src="https://i.imgur.com/lCamOEh.png"></a>
 
-<img src="https://i.imgur.com/Ra9wrmi.png">
-
-
-
-<img src="https://i.imgur.com/rYi3Rr2.png">
-
-
-
-<img src="https://i.imgur.com/rTKwgl9.png">
-
-
-<img src="https://i.imgur.com/rJgIGH6.png">
-
-	
-
-<img src="https://i.imgur.com/oEXBg61.png">
+<a href="#manaka"><img src="https://i.imgur.com/Ra9wrmi.png"></a>
 
 
 
-<img src="https://i.imgur.com/2RYThZj.png">
+<a href="#venti"><img src="https://i.imgur.com/rYi3Rr2.png"></a>
 
 
 
-<li>
-
-<img src="https://i.imgur.com/0QXT9st.png"></li>
+<a href="#ai"><img src="https://i.imgur.com/rTKwgl9.png"></a>
 
 
+<a href="#kenma"><img src="https://i.imgur.com/rJgIGH6.png"></a>
 
-<li>
+    
 
-<img src="https://i.imgur.com/fClupf9.png"></li>
+<a href="#dapperavi"><img src="https://i.imgur.com/oEXBg61.png"></a>
+
+
+
+<a href="#josh"><img src="https://i.imgur.com/2RYThZj.png"></a>
 
 
 
 
-</ul><a name="c"></a>
+<a href="#paimon"><img src="https://i.imgur.com/0QXT9st.png"></a>
 
+
+
+
+<a href="#xiangling"><img src="https://i.imgur.com/fClupf9.png"></a>
+
+
+
+</ul>
 
 </div>
+
+</div>
+
+
+
+
+
