@@ -16,9 +16,31 @@ body {
   flex-direction: column;
 }
 
+table {
+  border-collapse: collapse;
+    width: 450px;
+    border: 0px;
+    font-size: 13px;
+    font-family: 'inconsolata','andale mono','Lucida Console','verdana';
+    text-transform: uppercase;
+        text-align: center;
+
+}
+
+th, td {
+  padding: 10px;
+}
+
+
+tr:nth-child(even) {
+  background-color: #f2c2c8;
+}
+
+
+
 #socials {
-    z-index: 500;
-    position:fixed;
+    z-index: 100;
+    position:absolute;
     top: 20px;
     right: 20px;
     width: 120px;
@@ -30,45 +52,34 @@ body {
 }
 
 
-#table {
-
-    top: 200px;
-    bottom: 10px;
-    
-    position:fixed;
-
-    margin-right: auto;
-
-    margin-left: auto;
-
+#page {
+    height: 1500px;
     border: none;
-
     width: 80%;
-
     overflow: hidden;
-
     color: #6E6D62;
-
     font-family: Helvetica,Arial,sans-serif;
-    
     font-size: 9pt;
-    
     line-height: 18pt;
-
     letter-spacing: 1px;
-
     padding-left: 10px;
-
     padding-right: 10px;
-
     text-align: justify;
-
     background: none;
 
 
 }
 
-
+.box {
+  margin: auto;
+	width: 550px;
+	height: 100%;
+	overflow: auto;
+	padding: 15px;
+	margin: 15px;
+	text-align: justify;
+    
+}
 
 
 a:link, a:active, a:visited, a, a b {
@@ -87,6 +98,12 @@ a.navtab {
     display: inline-block;
 
     color: #4f4f4f;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+
 
     width: 150px;
 
@@ -117,6 +134,21 @@ a.navtab:hover {
     border: 1px solid #adadad;
 }
 
+
+a.comnav {
+
+	display: inline-block;
+	width: 100px;
+	background: #F8F8F8;
+	font-size: 9pt;
+	margin:5px;
+	font-family: 'inconsolata','andale mono','Lucida Console','verdana';
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+
 .header {
 
 
@@ -130,7 +162,7 @@ a.navtab:hover {
 
 	#fce3e6 0%, #fce3e6 15%, #fce3e6 25%, #fce3e6 25%, #fce3e6 35%, #fce3e6 35%, #fce3e6 50%, #fce3e6 65%, #fce3e6 65%, #fce3e6 75%, #fce3e6 75%, transparent 99%);
 
-
+z-index:300;
 	border-bottom: 0px solid #696969;
 
     text-align: justify;
@@ -176,8 +208,59 @@ a.navtab:hover {
     
 
 }
+.h3 {
+	font-size: 13pt;
+	font-family: 'inconsolata','andale mono','Lucida Console','verdana';
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+
+}
+/* https://github.com/maoberlehner/perfundo  */
+
+ .perfundo__overlay {
+     
+	 display: flex;
+	 visibility: hidden;
+	 position: fixed;
+	 top: 0;
+	 right: 0;
+	 bottom: 0;
+	 left: 0;
+	 z-index: 1000;
+	 justify-content: center;
+	 align-items: center;
+  background-color: rgba(252,227,230, 0.8);
+  
+  
+}
+
+ .perfundo__overlay:target, .perfundo__overlay.is-active {
+	 visibility: visible;
+
+}
+
+ .perfundo__overlay img {
+ height: 70%;
+	
+}
+ .perfundo__control {
+	 position: absolute;
+}
+ .perfundo__control, .perfundo__control:visited {
+	 color: #fff;
+	  font-size: 25pt;
+	/* [3] */
+}
+ .perfundo__close {
+	 top: 1em;
+	 right: 1em;
+}
+
 
 </style>
+
+
 <div id="socials">
     <a href="https://twitter.com/luckcapsule"><img src="https://i.imgur.com/XYIHrWm.png"></a>  
     <a href="https://www.instagram.com/luckcapsule/"><img src="https://i.imgur.com/9bMiU04.png"></a>
@@ -210,19 +293,196 @@ a.navtab:hover {
 
 </div>
 
-<div id="table">
+<div id="page" style="top:0px; position: absolute; left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto;   width: 600px;">
 
 
 
-<a name="a"></a><p class="h1">Commissions</p>
+<div class="box">
+    <a name="illust"></a><BR><BR> <BR><BR> <BR> <BR>  <BR>  <BR>  <BR> 
+<center>
+<a href="#illust" class="comnav">illustration</a>
+<a href="#vtuber" class="comnav">vtuber</a>
+<a href="#terms" class="comnav">terms</a>
+</center>
+ <BR> 
+<p class="h1">Art Commissions </p>
 
+<p class="h3"> Icons/Emotes</p>
+<center><table>
+        
+  <tr>
+<th>$25 each</th>
+  </tr>
+</table>
+<BR><p class="h3"> Character illustration</p>
+   <div class="perfundo">
 
-Page in progress
+   <a href="#cap">
+    <img src="https://i.imgur.com/Eb1cg88.png" height="150">
+  </a>
+  <div id="cap" class="perfundo__overlay">
 
+    <a href="#close" class="perfundo__close perfundo__control">✕</a>
+    
+    <img src=https://i.imgur.com/Eb1cg88.png>
+    
+  </div>
+  
+  <a href="#unicorn">
+    <img src="https://i.imgur.com/YDEyhOq.png" height="150">
+  </a>
+ 
+  <div id="unicorn" class="perfundo__overlay">
 
+    <a href="#close" class="perfundo__close perfundo__control">✕</a>
+    
+    <img src=https://i.imgur.com/YDEyhOq.png>
+    
+  </div>
+</div>
+
+<BR>
+<table>
+        
+  <tr>
+        <th></th>
+    <th>Simple</th>
+    <th>Painted</th>
+  </tr>
+  <tr>
+         <td>Bust</td>
+    <td>$30</td>
+    <td>$45</td>
+  </tr>
+  <tr>
+         <td>Halfbody</td>
+    <td>$45</td>
+    <td>$60</td>
+  </tr>
+    <tr>
+    <td>Fullbody</td>
+    <td>$60</td>
+    <td>$75</td>
+  </tr>
+</table>
+<BR>
+<B>Complicated design (eg. Genshin) +$10
+<br>Additional characters +30% price
+<br>Additional fee for commercial illustrations</B>
+    <BR><BR>
+    
+<table>
+   
+  <tr>
+
+    <th>Will draw</th>
+    <th>Won't draw</th>
+  </tr>
+  <tr>
+
+    <td>furry</td>
+    <td>mecha</td>
+  </tr>
+  <tr>
+   
+    <td>mild nsfw</td>
+    <td>elderly</td>
+  </tr>
+</table></center>
+<BR><p class="h3"> Process</p>
+<b>1.</b> Please read <a href="#terms">terms</a>.
+<BR><b>2.</b> Submit request via the form, if accepted I will contact you with pricing.
+<BR><b>3.</b> Payment will be made through Paypal before I start the piece. Refunds will only be provided if I am unable to complete the commission.
+<BR><b>4.</b> I will send a sketch progress update, you may request changes at this stage. After the piece is completed only minor changes can be made.
+<BR><b>5.</b> Turnaround time is around 2 weeks.
 </div>
 
 
+<div class="box">
+    <a name="vtuber"></a><BR><BR><BR> <BR> <BR> <BR>  <BR>  <BR>  <BR> 
+<center>
+<a href="#illust" class="comnav">illustration</a>
+<a href="#vtuber" class="comnav">vtuber</a>
+<a href="#terms" class="comnav">terms</a>
+</center>
+ <BR> 
+
+<p class="h1">Commissions</p>
+
+<p class="h3"> Vtuber/Live2d Model</p>
+
+<center>
+<table>
+        
+  <tr>
+        <th></th>
+    <th>Art only</th>
+    <th>Art and rig</th>
+  </tr>
+
+  <tr>
+         <td>Halfbody</td>
+    <td>$300</td>
+    <td>$600</td>
+  </tr>
+    <tr>
+    <td>Fullbody</td>
+    <td>$500</td>
+    <td>$800</td>
+  </tr>
+</table>
+
+<B>☆ Complex designs may have an additional charge<Br>☆ Please note I can only provide basic expressions like sad/angry, at this time I do not offer complex expressions such as waving hello</B>
+</center>
+
+<BR><p class="h3"> Process (art only)</p>
+<b>1.</b> Please read <a href="#terms">terms</a>.
+<BR><b>2.</b> Submit request via the form. Please have references, I am not offering design services, only art and rig. If accepted I will contact you with pricing.
+<BR><b>3.</b> Payment for half of full price will be made through Paypal before I start the piece. The other half will be paid at completion. If you cancel the commission after it has started I can only provide a partial refund (50% of initial payment).
+<BR><b>4.</b> I will send a sketch progress update, you may request changes at this stage. Feel free to request updates and changes while I am working on the piece. After the piece is completed only minor changes can be made.
+<BR><b>5.</b> Full process for art is around 2 months. When it is complete you will provde the other half of the payment and I will send your file. 
+
+<BR><p class="h3"> Process (art + rig)</p>
+<b>1.</b> Please read <a href="#terms">terms</a>.
+<BR><b>2.</b> Submit request via the form. Please have references, I am not offering design services, only art and rig. If accepted I will contact you with pricing.
+<BR><b>3.</b> Payment for art portion will be made through Paypal before I start the piece. If you cancel the commission after it has started I can only provide a partial refund (50% of initial payment). After art is completed there will be no refunds on this payment.
+<BR><b>4.</b> I will send a sketch progress update, you may request changes at this stage. Feel free to request updates and changes while I am working on the piece. After the piece is completed only minor changes can be made.
+<BR><b>5.</b> After art is completed you will submit payment for rigging. I will rig head xyz, body xz, breathing, mouth, eye, physics (hair, eye, clothes), and 3 basic expressions (you pick expressions).
+<BR><b>4.</b> Full process for art + rig is around 3 months. If you need help setting it up on Vtube Studio I can advise, but am not familiar with other programs like Prpr.
+</div>
+
+
+<div class="box">
+    <a name="terms"></a><BR><BR> <BR><BR> <BR> <BR>  <BR>  <BR>  <BR> 
+<center>
+<a href="#illust" class="comnav">illustration</a>
+<a href="#vtuber" class="comnav">vtuber</a>
+<a href="#terms" class="comnav">terms</a>
+</center>
+ <BR> 
+
+<p class="h1">Terms of Service</p>
+<b>I have the right to refuse your request.</b> I can reject your commission request for any reason, especially if I feel I cannot execute your request well or do not have time to complete it.
+<BR><BR>
+<b>Payments will be done through Paypal only.</b> 
+
+<BR><BR>
+<b>There are no refunds unless I am unable to complete your request or if work on the piece hasn't been started.</b> In the case of Vtuber/Live2d commissions, if you decide to cancel I can offer 50% refund on initial payments, ONLY if they are not completed (see commission page for details). No refunds will be given for completed works.
+
+<BR><BR>
+<b>By default I will use completed commissions as art examples on my social media and website.</b> Please state if you do not want me posting your requested work online.
+
+<BR><BR>
+<b>Do not claim works as your own.</b>
+
+<BR><BR>
+<b>See commission pages for details on pricing, turnaround time, and process.</b>
+</div>
+
+</div>
 
 
 
