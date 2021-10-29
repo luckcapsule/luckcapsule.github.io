@@ -32,16 +32,15 @@ body {
 
 #table {
 position: absolute;
-    top: 240px;
+    top: 0px;
+    left: 0px;
 
     margin-right: auto;
 
     margin-left: auto;
 
     border: none;
-
-    width: 90%;
-
+width: 100%;
     overflow: hidden;
 
     color: #6E6D62;
@@ -49,8 +48,6 @@ position: absolute;
     font-family: Helvetica,Arial,sans-serif;
     
     font-size: 9pt;
-    
-    line-height: 18pt;
 
     letter-spacing: 1px;
 
@@ -64,7 +61,6 @@ position: absolute;
 
 #galbox {
     margin-top:10px;
-    height: 100%;
     padding: none;
     overflow: none;
     -ms-overflow-style: none; 
@@ -80,7 +76,7 @@ position: absolute;
     
     border: none;
 
-    width: 80%;
+    width: 70%;
     
 	margin: 0 auto;
 
@@ -167,22 +163,17 @@ a.navtab:hover {
 }
 
 .header {
-
-
-	top: 0px;
-
-	left: 0px;
-
 	width: 100%;
+	padding: 20px;
 
 	background: linear-gradient(to bottom, #fce3e6,
 
 	#fce3e6 0%, #fce3e6 15%, #fce3e6 25%, #fce3e6 25%, #fce3e6 35%, #fce3e6 35%, #fce3e6 50%, #fce3e6 65%, #fce3e6 65%, #fce3e6 75%, #fce3e6 75%, transparent 99%);
 
-
-	border-bottom: 0px solid #696969;
-
     text-align: justify;
+    
+  justify-content: center;
+  align-items: center;
 
 }
 
@@ -206,11 +197,9 @@ a.navtab:hover {
 
 .h2 {
 
-    text-align: center;
 
     font-size: 32pt;
 
-    line-height: 10px;
 
     color: #8a8a8a;
 
@@ -219,8 +208,7 @@ a.navtab:hover {
     letter-spacing: -0.5pt;
 
     font-style: italic;
-
-    padding: none;
+    display: inline;
 }
 
 /* https://github.com/maoberlehner/perfundo  */
@@ -282,7 +270,8 @@ a.navtab:hover {
 <a name="top"></a>
 
 
-<div class="header"><p class="h2"><b><a href="/">Luck Capsule</a></b></p>
+<div id="table">
+    <div class="header"><div class="h2"><b><center><a href="/">Luck Capsule</a></center></b></div><BR>
 
 <div class="navtab"> <center>
 
@@ -303,9 +292,6 @@ a.navtab:hover {
 </div>
 
 </div>
-
-
-<div id="table">
 
 <center>
  
