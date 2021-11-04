@@ -1,7 +1,5 @@
 
 
-
-
 <style>
 
 
@@ -12,8 +10,6 @@ body {
   display: flex;
 
   justify-content: center;
-
-  align-items: center;
 
   flex-direction: column;
 }
@@ -33,25 +29,36 @@ body {
 }
 
 
-#table {
-position:absolute;
-top: 250px;
-     height: 100%;
+#page {
+position: absolute;
+    top: 175px;
+    left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto;
+
     border: none;
-    width: 550px;
     overflow: hidden;
     color: #6E6D62;
     font-family: Helvetica,Arial,sans-serif;
-    font-size: 9pt;
-    line-height: 18pt;
+        font-size: 9pt;
     letter-spacing: 1px;
-    padding-left: 10px;
-    padding-right: 10px;
+    line-height: 18pt;
+    font-weight: normal;
     text-align: justify;
     background: none;
-
 }
 
+@media only screen and (min-width: 601px) {
+  #page {
+        width: 70%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #page {
+        width: 90%;
+  }
+}
 
 
 a:link, a:active, a:visited, a, a b {
@@ -65,7 +72,7 @@ a:link, a:active, a:visited, a, a b {
 
 a.navtab {
 
-    border-radius: 13px;
+  border-radius: 13px;
 
     display: inline-block;
 
@@ -76,30 +83,23 @@ a.navtab {
     -webkit-transition:.5s;
     transition:.5s;
 
-
-    width: 150px;
-
     border: 1px solid #4f4f4f;
 
     background: rgba(255, 255, 255, 1) ;
-
-    font-size: 13px;
-
     font-family: 'inconsolata','andale mono','Lucida Console','verdana';
-
     letter-spacing: 1.5px;
-
     text-transform: uppercase;
-
     text-align: center;
-
     text-decoration: none;
+    font-weight: lighter;
 
     padding: 3px;
-
+    padding-left: 10px;
+     padding-right: 10px;
     margin: 10px;
-
+    
 }
+
 
 a.navtab:hover {
     color: #adadad;
@@ -107,25 +107,19 @@ a.navtab:hover {
 }
 
 .header {
-
-position: absolute;
-
+    position: absolute;
 	top: 0px;
-
 	left: 0px;
-
 	width: 100%;
-
-	background: linear-gradient(to bottom, #fce3e6,
-
-	#fce3e6 0%, #fce3e6 15%, #fce3e6 25%, #fce3e6 25%, #fce3e6 35%, #fce3e6 35%, #fce3e6 50%, #fce3e6 65%, #fce3e6 65%, #fce3e6 75%, #fce3e6 75%, transparent 99%);
-
-z-index:300;
-	border-bottom: 0px solid #696969;
-
+	height: 150px;
+	background: #fce3e6;
+	border-bottom: 1px solid #6E6D62;
+    z-index:300;
     text-align: justify;
 
+
 }
+
 
 
 .h1 {
@@ -140,6 +134,7 @@ z-index:300;
     line-height: 10px;
 
     letter-spacing: 1.5px;
+    font-weight: normal;
 
     font-family: 'courier', 'inconsolata','andale mono','Lucida Console', 'monospace';
 
@@ -167,7 +162,175 @@ z-index:300;
 
 }
 
+@media only screen and (max-width: 400px) {
+a.navtab, #socials {
+        display:none;
+  }
+
+  :root {
+  --primColor: #ffff;
+  --secoColor: #555555;
+  --cornerRad: 4px;
+}
+details {
+
+  margin: 20px;
+  z-index: 999;
+}
+summary {
+  writing-mode: vertical-lr;
+  text-align: center;
+  padding: 12px 10px;
+  width: 23px;
+  height: 17px;
+  background-color: var(--primColor);
+  border: 1px solid var(--secoColor);
+  border-radius: var(--cornerRad);
+  color: var(--secoColor);
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  transition: transform 200ms ease-in-out 0s;
+}
+summary::before,
+summary::after {
+  position: static;
+  top: 0;
+  left: 0;
+}
+summary::before {
+  content: "";
+}
+summary::after {
+  content: "|||";
+  letter-spacing: 1px;
+  
+}
+summary:hover {
+  transform: scale(1.1);
+}
+summary::marker {
+  font-size: 0;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+details[open] .menu {
+  animation-name: menuAnim;
+}
+details[open] summary::before {
+  content: "|||";
+  
+  letter-spacing: 1px;
+}
+details[open] summary::after {
+  content: "";
+}
+.menu {
+  height: 0;
+  width: fit-content;
+  border: 1px solid var(--secoColor);
+  border-radius: var(--cornerRad);
+  background-color: var(--primColor);
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  animation: closeMenu 300ms ease-in-out forwards;
+}
+.menu a {
+  padding: 12px 24px;
+  margin: 0 16px;
+  color: var(--secoColor);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  text-align: center;
+  transition: filter 200ms linear 0s;
+}
+.menu a:nth-of-type(1) {
+  padding-top: 24px;
+}
+.menu a:nth-last-of-type(1) {
+  border-bottom: none;
+}
+.menu a:hover {
+  filter: brightness(200%);
+}
+details::before {
+  color: var(--secoColor);
+  position: absolute;
+  margin-left: 80px;
+  padding: 10px 10px;
+  opacity: 0.4;
+}
+details[open]::before {
+  animation: fadeMe 300ms linear forwards;
+}
+@keyframes menuAnim {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 190px;
+  }
+}
+@keyframes fadeMe {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+}
+
+a.dropdown {
+
+    color: #4f4f4f;
+
+    font-size: 13px;
+
+    font-family: 'inconsolata','andale mono','Lucida Console','verdana';
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    text-align: center;
+
+    text-decoration: none;
+    
+    font-weight: lighter;
+
+    padding: 3px;
+
+    margin: 10px;
+
+}
+
+
+
 </style>
+<body>
+    
+    <details>
+  <summary></summary>
+  <nav class="menu">
+<a href="/gallery" class="dropdown">gallery</a>
+
+
+<a href="/commissions" class="dropdown">commissions</a>
+
+
+<a href="/contact" class="dropdown">about/contact</a>
+
+
+<a href="https://linktr.ee/luckcapsule" class="dropdown">socials</a>
+  </nav>
+</details>
+
 <div id="socials">
     <a href="https://twitter.com/luckcapsule"><img src="https://i.imgur.com/XYIHrWm.png"></a>  
     <a href="https://www.instagram.com/luckcapsule/"><img src="https://i.imgur.com/9bMiU04.png"></a>
@@ -177,9 +340,9 @@ z-index:300;
 
 
 
-<div class="header"><p class="h2"><b><a href="/">Luck Capsule</a></b></p>
+  <div class="header"><b><center><a href="/"><BR><img src="https://i.imgur.com/Y0QwBTU.png" height="80px"></a><BR>
 
-<div class="navtab"> <center>
+<div class="navtab" id="fitnav"> <center>
 
 
 
@@ -189,9 +352,10 @@ z-index:300;
 <a href="/commissions" class="navtab">commissions</a>
 
 
-<a href="/contact" class="navtab">contact</a>
+<a href="/contact" class="navtab">about/contact</a>
 
 </center>
+
 
 <br><BR>
 
@@ -199,15 +363,33 @@ z-index:300;
 
 </div>
 
-<div id="table">
+
+<div id="page">
 
 
-<a name="a"></a><p class="h1">Contact and Socials </p>
-<center></center>
+<a name="a"></a><p class="h1">about </p>
+<center>
+Samira (or Capsule) is a self-taught illustrator and vtuber based in the United States. She loves cute and colorful characters so much she made herself into one. You can email or message her on social media with any inquiries.
+
+<BR><BR>
+
 
 Email: samirayeganegi@gmail.com
-<BR>Twitter: <a href=“https://twitter.com/luckcapsule">@luckcapsule</a>
-<BR>Instagram: <a href=“https://www.instagram.com/luckcapsule">@luckcapsule</a>
-<BR>Artfol: @capsule</a>
+<BR><a href=“https://linktr.ee/luckcapsule">Social media links</a>
 </center>
+
+
+<a name="c"></a>
+
 </div>
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.2.0/jquery.fittext.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="jquery.fittext.js"></script>
+<script>jQuery("#fitnav").fitText(4, { minFontSize: '4px', maxFontSize: '13px' });
+</script>
+</body>
+
+
