@@ -1,0 +1,729 @@
+<style>
+
+body {
+    margin:  0px;
+    background: #fff;
+
+  display: flex;
+
+  justify-content: center;
+
+  flex-direction: column;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border: 0px;
+    width: 45%;
+    font-size: 13px;
+    font-family: 'inconsolata','andale mono','Lucida Console','verdana';
+    text-transform: uppercase;
+        text-align: center;
+
+}
+
+@media only screen and (min-width: 1301px) {
+  table {
+        width: 45%;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  table {
+        
+    width: 80%;
+  }
+}
+
+th, td {
+  padding: 10px;
+}
+
+
+tr:nth-child(even) {
+  background-color: #f2c2c8;
+}
+
+
+
+#socials {
+    z-index: 301;
+    position:absolute;
+    top: 20px;
+    right: 20px;
+    width: 120px;
+}
+
+#socials img {
+    height: 25px;
+    padding:5px;
+}
+
+
+
+#page {
+    
+    border: none;
+    overflow: hidden;
+    color: #6E6D62;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 9pt;
+    font-weight:normal;
+    line-height: 18pt;
+    letter-spacing: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: justify;
+    background: none;
+}
+
+@media only screen and (min-width: 601px) {
+  #page {
+        width: 70%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #page {
+        width: 90%;
+  }
+}
+
+.targetDiv{
+	display:none;
+}  
+
+.box1, .box2, .box3 {
+    
+  margin: auto;
+	height: 100%;
+	overflow: hidden;
+	padding: 15px;
+	margin: 15px;
+	text-align: justify;
+    
+}
+
+.minibox {
+    
+	margin: auto;
+    width: auto;
+	overflow: auto;
+	position: center;
+	padding: 50px;
+	margin-bottom: 50px;
+	margin-top: 50px;
+	background: #EEEEEE;
+	border-radius: 50px;
+	text-align: justify;
+}
+
+
+
+@media only screen and (min-width: 1350px) {
+.minibox {
+        width: 800px;
+  }
+}
+
+
+.comm {
+
+	margin-right: auto;
+	margin-left: auto;}
+    
+    
+@media only screen and (min-width: 1351px) {
+  .comm img { 
+    border-radius: 20px;
+    MARGIN-left: 20px;
+    float: right;
+    width: 48%;
+    padding: 10px;
+
+}
+    
+}
+@media only screen and (max-width: 1350px) {
+
+.comm img {
+       border-radius: 30px;
+     padding: 10px;
+    margin: auto;
+    width: 90%;
+    
+}
+
+}
+  
+
+a:link, a:active, a:visited, a, a b {
+
+    color: #e8abb2;
+
+    text-decoration: none;
+
+}
+
+
+a.navtab {
+
+    border-radius: 13px;
+
+    display: inline-block;
+
+    color: #4f4f4f;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+
+    border: 1px solid #4f4f4f;
+
+    background: rgba(255, 255, 255, 1) ;
+
+
+    font-family: 'inconsolata','andale mono','Lucida Console','verdana';
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    text-align: center;
+
+    text-decoration: none;
+    font-weight: lighter;
+
+    padding: 3px;
+    padding-left: 10px;
+     padding-right: 10px;
+
+    margin: 10px;
+    
+
+}
+
+
+
+a.navtab:hover {
+    color: #adadad;
+    border: 1px solid #adadad;
+}
+
+
+a.showSingle, a.reqbutton {
+
+	display: inline-block;
+	width: 100px;
+	background: #F8F8F8;
+	font-size: 9pt;
+	margin:5px;
+	font-family: 'inconsolata','andale mono','Lucida Console','verdana';
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+a.kofi {
+
+	display: inline-block;
+	background: #f2c2c8;
+	color: #ffffff;
+	font-size: 10pt;
+	padding: 15px;
+	letter-spacing: 1.5;
+	margin:5px;
+	font-family: 'inconsolata','andale mono','Lucida Console','verdana';
+	text-align: center;
+	border-radius: 20px;
+}
+
+
+.header {
+    position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 150px;
+	background: #fce3e6;
+	border-bottom: 1px solid #6E6D62;
+    z-index:300;
+    text-align: justify;
+
+}
+
+
+.h1 {
+    border-bottom: 2px dashed #fce3e6;
+
+    text-align: left;
+
+    font-size: 18pt;
+
+    color: #8a8a8a;
+
+    line-height: 10px;
+
+    letter-spacing: 1.5px;
+        font-weight: lighter;
+
+
+    font-family: 'courier', 'inconsolata','andale mono','Lucida Console', 'monospace';
+
+}
+
+.h2 {
+   font-size: 32pt;
+
+    color: #8a8a8a;
+
+    font-family: 'georgia';
+
+    letter-spacing: -0.5pt;
+
+    font-style: italic;
+    display: inline;
+
+    
+
+}
+.h3 {
+	font-size: 13pt;
+	font-family: 'inconsolata','andale mono','Lucida Console','verdana';
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+
+}
+/* https://github.com/maoberlehner/perfundo  */
+
+ .perfundo__overlay {
+     
+	 display: flex;
+	 visibility: hidden;
+	 position: fixed;
+	 top: 0;
+	 right: 0;
+	 bottom: 0;
+	 left: 0;
+	 z-index: 1000;
+	 justify-content: center;
+	 align-items: center;
+  background-color: rgba(252,227,230, 0.8);
+  
+  
+}
+
+ .perfundo__overlay:target, .perfundo__overlay.is-active {
+	 visibility: visible;
+
+}
+
+ .perfundo__overlay img {
+ height: 70%;
+	
+}
+ .perfundo__control {
+	 position: absolute;
+}
+ .perfundo__control, .perfundo__control:visited {
+	 color: #fff;
+	  font-size: 25pt;
+	/* [3] */
+}
+ .perfundo__close {
+	 top: 1em;
+	 right: 1em;
+}
+
+@media only screen and (max-width: 400px) {
+a.navtab, #socials {
+        display:none;
+  }
+  
+  :root {
+  --primColor: #ffff;
+  --secoColor: #555555;
+  --cornerRad: 4px;
+}
+details {
+
+  margin: 20px;
+  z-index: 999;
+}
+summary {
+  writing-mode: vertical-lr;
+  text-align: center;
+  padding: 12px 10px;
+  width: 23px;
+  height: 17px;
+  background-color: var(--primColor);
+  border: 1px solid var(--secoColor);
+  border-radius: var(--cornerRad);
+  color: var(--secoColor);
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  transition: transform 200ms ease-in-out 0s;
+}
+summary::before,
+summary::after {
+  position: static;
+  top: 0;
+  left: 0;
+}
+summary::before {
+  content: "";
+}
+summary::after {
+  content: "|||";
+  letter-spacing: 1px;
+  
+}
+summary:hover {
+  transform: scale(1.1);
+}
+summary::marker {
+  font-size: 0;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+details[open] .menu {
+  animation-name: menuAnim;
+}
+details[open] summary::before {
+  content: "|||";
+  
+  letter-spacing: 1px;
+}
+details[open] summary::after {
+  content: "";
+}
+.menu {
+  height: 0;
+  width: fit-content;
+  border: 1px solid var(--secoColor);
+  border-radius: var(--cornerRad);
+  background-color: var(--primColor);
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  animation: closeMenu 300ms ease-in-out forwards;
+}
+.menu a {
+  padding: 12px 24px;
+  margin: 0 16px;
+  color: var(--secoColor);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  text-align: center;
+  transition: filter 200ms linear 0s;
+}
+.menu a:nth-of-type(1) {
+  padding-top: 24px;
+}
+.menu a:nth-last-of-type(1) {
+  border-bottom: none;
+}
+.menu a:hover {
+  filter: brightness(200%);
+}
+details::before {
+  color: var(--secoColor);
+  position: absolute;
+  margin-left: 80px;
+  padding: 10px 10px;
+  opacity: 0.4;
+}
+details[open]::before {
+  animation: fadeMe 300ms linear forwards;
+}
+@keyframes menuAnim {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 190px;
+  }
+}
+@keyframes fadeMe {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+}
+
+a.dropdown {
+
+    color: #4f4f4f;
+
+    font-size: 13px;
+
+    font-family: 'inconsolata','andale mono','Lucida Console','verdana';
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    text-align: center;
+
+    text-decoration: none;
+    
+    font-weight: lighter;
+
+    padding: 3px;
+
+    margin: 10px;
+
+}
+
+
+
+</style>
+
+
+
+<!-- ---------------------------------------------------->
+
+
+<body>
+    
+    <details>
+  <summary></summary>
+  <nav class="menu">
+<a href="/gallery" class="dropdown">gallery</a>
+
+
+<a href="/commissions" class="dropdown">commissions</a>
+
+
+<a href="/contact" class="dropdown">about/contact</a>
+
+
+<a href="https://linktr.ee/luckcapsule" class="dropdown">socials</a>
+  </nav>
+</details>
+
+
+<div id="socials">
+    <a href="https://twitter.com/luckcapsule"><img src="https://i.imgur.com/XYIHrWm.png"></a>  
+    <a href="https://www.instagram.com/luckcapsule/"><img src="https://i.imgur.com/9bMiU04.png"></a>
+    <a href="https://www.twitch.tv/luckcapsule"><img src="https://i.imgur.com/rIwRZ1L.png"></a>
+    </div>
+
+    <div class="header"><b><center><a href="/"><BR><img src=https://i.imgur.com/Y0QwBTU.png" height="80px"></a><BR>
+
+<div class="navtab" id="fitnav"> <center>
+
+
+
+<a href="/gallery" class="navtab">gallery</a>
+
+
+<a href="/commissions" class="navtab">commissions</a>
+
+<a href="/contact" class="navtab">about/contact</a>
+
+</center>
+
+
+<br><BR>
+
+</div>
+
+</div>
+
+<div id="page" style="position: absolute; top:0px; left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto;">
+
+<div class="box" style="margin-top:200px;">
+<center>
+
+
+<a  class="showSingle" href="/commissions">Terms</a>
+<a  class="showSingle" href="/illust">Illustration</a>
+<a  class="showSingle"  href="/vtuber">Vtuber</a>
+<BR><BR>
+
+</center>
+</div>
+
+<BR> <CENTER><a href="https://ko-fi.com/luckcapsule/commissions" class="kofi">Commission requests now also available through Kofi!</a></center>
+ <BR> 
+<p class="h1">Character Illustration </p>
+
+<!-- -------------EMOTE--------------------------------------->
+
+<center>
+<div class="minibox">
+<div class="comm"><center>
+<img src="https://i.imgur.com/4zgUS1L.png">
+<BR>
+<img src="https://i.imgur.com/dPsSRZu.png">
+</center>
+</div>
+
+<p class="h3"> Icons/Emotes</p>
+
+
+<p>
+<table>
+  <tr>
+    <th>$20 each</th>
+	  
+  </tr>
+
+  <tr>
+    <td>$75 for a pack of 5</td>
+  </tr>
+  <tr>
+    <th>$30 for animated</th> 
+	  
+</table></p>
+	    
+<P>	    <BR> Emotes will be provided in 400px, 128px, and 112px. Smaller or in between sizes can provided upon request but larger sizes must be negotiated before commission is started. </P>
+
+</div>
+<!-- -------------ILLUST-------------------------------------------------->
+<div class="minibox">
+
+
+
+
+<div class="comm">    <center> <BR><img src="https://i.imgur.com/v7eXVaD.jpg"> </center></div>
+
+<p class="h3"> Character illustration</p>
+<table>
+        
+  <tr>
+        <th></th>
+    <th>price</th>
+  </tr>
+  <tr>
+         <td>Bust</td>
+    <td>$45</td>
+  </tr>
+  <tr>
+         <td>Halfbody</td>
+    <td>$60</td>
+  </tr>
+    <tr>
+    <td>Fullbody</td>
+    <td>$80</td>
+  </tr>
+</table>
+<BR>
+<B>Complicated design (eg. Genshin) + 15%
+<br>Additional characters + 40%
+<br>Background art + $10 </b><BR>*No complex backgrounds, simple shapes or colors can be provided free.
+    <BR><BR>
+    
+    
+<center>   <div class="perfundo">
+
+   <a href="#peri">
+    <img src="https://i.imgur.com/HMLIv9t.png" height="150" style="border-radius: 20px;">
+  </a>
+  <div id="peri" class="perfundo__overlay">
+
+    <a href="#close" class="perfundo__close perfundo__control">✕</a>
+    
+    <img src=https://i.imgur.com/HMLIv9t.png>
+    
+  </div>
+  
+  <a href="#tsui">
+    <img src="https://i.imgur.com/H1E8IEV.png" height="150" style="border-radius: 20px;">
+  </a>
+ 
+  <div id="tsui" class="perfundo__overlay">
+
+    <a href="#close" class="perfundo__close perfundo__control">✕</a>
+    
+    <img src=https://i.imgur.com/H1E8IEV.png>
+    
+  </div>
+</div>
+    </center>
+    
+    </DIV>
+    
+    <!---------------INFO-------------------------------------------------->
+    <div class="minibox">
+    
+        <p class="h3"> Content</p>
+
+<table>
+   
+  <tr>
+
+    <th>Will draw</th>
+    <th>Won't draw</th>
+  </tr>
+  <tr>
+
+    <td>furry</td>
+    <td>mecha</td>
+  </tr>
+    <tr>
+
+    <td>mild nsfw</td>
+    <td>hard gore</td>
+  </tr>
+  <tr>
+   
+    <td></td>
+    <td>elderly</td>
+  </tr>
+</table>
+<br>
+    <p class="h3"> Commercial use</p>
+   
+   <center> <table>
+        
+  <tr>
+        <th></th>
+    <th>Use</th>
+    <th>Price </th>
+  </tr>
+
+  <tr>
+         <td>Tier 1</td>
+    <td>Use on streaming platforms, promotion of brand</td>
+    <td>+50% </td>
+  </tr>
+    <tr>
+    <td>Tier 2</td>
+    <td>Production of goods</td>
+    <td>+100%</td>
+  </tr>
+</table>
+
+<BR> Emote pricing already includes commercial use Tier 1.</center>
+
+    
+<BR><p class="h3"> Process</p>
+<b>1.</b> Please read terms.
+<BR><b>2.</b> Submit request via the form, if accepted I will contact you with pricing.
+<BR><b>3.</b> Payment will be made through Paypal/Stripe before I start the piece. Refunds will only be provided if I am unable to complete the commission.
+<BR><b>4.</b> I will send a sketch progress update, you may request changes at this stage. After the piece is completed only minor changes can be made. You may requests WIPs throughout the process.
+<BR><b>5.</b> Turnaround time is around 2 weeks depending on the project.
+
+<BR><BR>
+  <CENTER><a href="https://forms.gle/rzs1onBaV4BCfQrj7" class="reqbutton">SUBMIT REQUEST</a></CENTER>
+  <BR><BR>
+</div>
+
+</body>
+
+    <!-- --------------------------------------------------------------->
