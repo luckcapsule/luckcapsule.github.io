@@ -1,7 +1,6 @@
-
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-
 
 body {
     margin:  0px;
@@ -13,6 +12,18 @@ body {
 
   flex-direction: column;
 }
+
+
+
+th, td {
+  padding: 10px;
+}
+
+
+tr:nth-child(even) {
+  background-color: #f2c2c8;
+}
+
 
 
 #socials {
@@ -29,22 +40,19 @@ body {
 }
 
 
-#page {
-position: absolute;
-    top: 175px;
-    left: 0; 
-  right: 0; 
-  margin-left: auto; 
-  margin-right: auto;
 
+#page {
+    
     border: none;
     overflow: hidden;
     color: #6E6D62;
     font-family: Helvetica,Arial,sans-serif;
-        font-size: 9pt;
-    letter-spacing: 1px;
+    font-size: 9pt;
+    font-weight:normal;
     line-height: 18pt;
-    font-weight: normal;
+    letter-spacing: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
     text-align: justify;
     background: none;
 }
@@ -60,6 +68,56 @@ position: absolute;
   }
 }
 
+.fa,.fa-solid,.fa-brands {
+  padding: 15px;
+  font-size: 25px;
+  width: 25px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+  background: white;
+}
+
+.fa:hover,.fa-solid:hover,.fa-brands:hover {
+  opacity: 0.7;
+}
+
+
+.box1, .box2, .box3 {
+    
+  margin: auto;
+	height: 100%;
+	overflow: hidden;
+	padding: 15px;
+	margin: 15px;
+	text-align: justify;
+    
+}
+
+.minibox {
+    
+	margin: auto;
+    width: auto;
+	overflow: auto;
+	position: center;
+	padding: 50px;
+	margin-bottom: 50px;
+	margin-top: 50px;
+	background: #EEEEEE;
+	border-radius: 50px;
+	text-align: justify;
+}
+
+
+
+@media only screen and (min-width: 1350px) {
+.minibox {
+        width: 800px;
+  }
+}
+
+
 
 a:link, a:active, a:visited, a, a b {
 
@@ -72,7 +130,7 @@ a:link, a:active, a:visited, a, a b {
 
 a.navtab {
 
-  border-radius: 13px;
+    border-radius: 13px;
 
     display: inline-block;
 
@@ -86,25 +144,50 @@ a.navtab {
     border: 1px solid #4f4f4f;
 
     background: rgba(255, 255, 255, 1) ;
+
+
     font-family: 'inconsolata','andale mono','Lucida Console','verdana';
+
     letter-spacing: 1.5px;
+
     text-transform: uppercase;
+
     text-align: center;
+
     text-decoration: none;
     font-weight: lighter;
 
     padding: 3px;
     padding-left: 10px;
      padding-right: 10px;
+
     margin: 10px;
     
+
 }
+
 
 
 a.navtab:hover {
     color: #adadad;
     border: 1px solid #adadad;
 }
+
+
+a.showSingle, a.reqbutton {
+
+	display: inline-block;
+	width: 100px;
+	background: #F8F8F8;
+	font-size: 9pt;
+	margin:5px;
+	font-family: 'inconsolata','andale mono','Lucida Console','verdana';
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+
 
 .header {
     position: absolute;
@@ -113,13 +196,10 @@ a.navtab:hover {
 	width: 100%;
 	height: 150px;
 	background: #fce3e6;
-	border-bottom: 1px solid #6E6D62;
     z-index:300;
     text-align: justify;
 
-
 }
-
 
 
 .h1 {
@@ -134,19 +214,15 @@ a.navtab:hover {
     line-height: 10px;
 
     letter-spacing: 1.5px;
-    font-weight: normal;
+        font-weight: lighter;
+
 
     font-family: 'courier', 'inconsolata','andale mono','Lucida Console', 'monospace';
 
 }
 
 .h2 {
-
-    text-align: center;
-
-    font-size: 32pt;
-
-    line-height: 10px;
+   font-size: 32pt;
 
     color: #8a8a8a;
 
@@ -155,134 +231,17 @@ a.navtab:hover {
     letter-spacing: -0.5pt;
 
     font-style: italic;
-
-    padding: none;
+    display: inline;
 
     
 
 }
-
-@media only screen and (max-width: 400px) {
-a.navtab, #socials {
-        display:none;
-  }
-
-  :root {
-  --primColor: #ffff;
-  --secoColor: #555555;
-  --cornerRad: 4px;
-}
-details {
-
-  margin: 20px;
-  z-index: 999;
-}
-summary {
-  writing-mode: vertical-lr;
-  text-align: center;
-  padding: 12px 10px;
-  width: 23px;
-  height: 17px;
-  background-color: var(--primColor);
-  border: 1px solid var(--secoColor);
-  border-radius: var(--cornerRad);
-  color: var(--secoColor);
-  cursor: pointer;
-  user-select: none;
-  outline: none;
-  transition: transform 200ms ease-in-out 0s;
-}
-summary::before,
-summary::after {
-  position: static;
-  top: 0;
-  left: 0;
-}
-summary::before {
-  content: "";
-}
-summary::after {
-  content: "|||";
-  letter-spacing: 1px;
-  
-}
-summary:hover {
-  transform: scale(1.1);
-}
-summary::marker {
-  font-size: 0;
-}
-summary::-webkit-details-marker {
-  display: none;
-}
-details[open] .menu {
-  animation-name: menuAnim;
-}
-details[open] summary::before {
-  content: "|||";
-  
-  letter-spacing: 1px;
-}
-details[open] summary::after {
-  content: "";
-}
-.menu {
-  height: 0;
-  width: fit-content;
-  border: 1px solid var(--secoColor);
-  border-radius: var(--cornerRad);
-  background-color: var(--primColor);
-  margin-top: 8px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
-  animation: closeMenu 300ms ease-in-out forwards;
-}
-.menu a {
-  padding: 12px 24px;
-  margin: 0 16px;
-  color: var(--secoColor);
-  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-  text-decoration: none;
-  text-align: center;
-  transition: filter 200ms linear 0s;
-}
-.menu a:nth-of-type(1) {
-  padding-top: 24px;
-}
-.menu a:nth-last-of-type(1) {
-  border-bottom: none;
-}
-.menu a:hover {
-  filter: brightness(200%);
-}
-details::before {
-  color: var(--secoColor);
-  position: absolute;
-  margin-left: 80px;
-  padding: 10px 10px;
-  opacity: 0.4;
-}
-details[open]::before {
-  animation: fadeMe 300ms linear forwards;
-}
-@keyframes menuAnim {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: 190px;
-  }
-}
-@keyframes fadeMe {
-  0% {
-    opacity: 0.4;
-  }
-  100% {
-    opacity: 0;
-  }
-}
+.h3 {
+	font-size: 13pt;
+	font-family: 'inconsolata','andale mono','Lucida Console','verdana';
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
 
 }
 
@@ -313,10 +272,15 @@ a.dropdown {
 
 
 </style>
+
+
+
+<!-- ---------------------------------------------------->
+
+
 <body>
     
-    <details>
-  <summary></summary>
+
   <nav class="menu">
 <a href="/gallery" class="dropdown">gallery</a>
 
@@ -327,20 +291,15 @@ a.dropdown {
 <a href="/contact" class="dropdown">about/contact</a>
 
 
-<a href="https://linktr.ee/luckcapsule" class="dropdown">socials</a>
   </nav>
-</details>
 
 <div id="socials">
     <a href="https://twitter.com/luckcapsule"><img src="https://i.imgur.com/XYIHrWm.png"></a>  
     <a href="https://www.instagram.com/luckcapsule/"><img src="https://i.imgur.com/9bMiU04.png"></a>
     <a href="https://www.twitch.tv/luckcapsule"><img src="https://i.imgur.com/rIwRZ1L.png"></a>
     </div>
-<a name="top"></a>
 
-
-
-  <div class="header"><b><center><a href="/"><BR><img src="https://i.imgur.com/Y0QwBTU.png" height="80px"></a><BR>
+    <div class="header"><b><center><a href="/"><BR><img src="https://i.imgur.com/4Hvzhaq.png" height="80px;"></a><BR>
 
 <div class="navtab" id="fitnav"> <center>
 
@@ -351,39 +310,48 @@ a.dropdown {
 
 <a href="/commissions" class="navtab">commissions</a>
 
-
 <a href="/contact" class="navtab">about/contact</a>
 
 </center>
 
-
-<br><BR>
-
-</div>
-
 </div>
 
 
-<div id="page">
+<div id="page" style="position: absolute; top:0px; left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto;">
+
+<div class="minibox" style="margin-top:200px;">
+
 
 
 <a name="a"></a><p class="h1">about </p>
-<center>
+
 Capsule is a self-taught illustrator and vtuber based in the United States. She loves cute and colorful characters so much she made herself into one. You can email or message her on social media with any inquiries.
 
 <BR><BR>
 
 
 Email: luckcapsule.mail@gmail.com
-<BR><a href="https://linktr.ee/luckcapsule/">Social media links</a>
-</center>
+<BR><BR>
+<center>
 
 
-<a name="c"></a>
+<a href="https://twitter.com/luckcapsule" class="fa fa-twitter"></a>
+<a href="https://ko-fi.com/luckcapsule" class="fa-solid fa-mug-saucer"></a>
+<a href="https://twitch.tv/luckcapsule/" class="fa fa-twitch"></a>
+<a href="https://tiktok.com/@luckcapsule" class="fa-brands fa-tiktok"></a>
+<a href="https://www.instagram.com/luckcapsule/" class="fa fa-instagram"></a>
+<a href="https://luck-capsule.tumblr.com/" class="fa fa-tumblr"></a>
+<a href="https://youtube.com/@LuckCapsule" class="fa fa-youtube"></a>
 
-</div>
 
+</center>             
 
+</div></div>
+
+<script src="https://kit.fontawesome.com/fd548f31d1.js" crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.2.0/jquery.fittext.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
