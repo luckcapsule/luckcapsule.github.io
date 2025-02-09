@@ -1,523 +1,137 @@
-
-
-<style>
-
-body {
-    margin:  0px;
-    background: #fff;
-
-  display: flex;
-
-  justify-content: center;
-
-  align-items: center;
-
-  flex-direction: column;
-}
-
-table {
-    border-collapse: collapse;
-    border: 0px;
-    width: 450px;
-    font-size: 13px;
-    font-family: 'inconsolata','andale mono','Lucida Console','verdana';
-    text-transform: uppercase;
-        text-align: center;
-
-}
-
-@media only screen and (min-width: 501px) {
-  table {
-        width: 450px;
-  }
-}
-@media only screen and (max-width: 500px) {
-  table {
-        
-    width: 50%;
-  }
-}
-
-th, td {
-  padding: 10px;
-}
-
-
-tr:nth-child(even) {
-  background-color: #f2c2c8;
-}
-
-
-
-#socials {
-    z-index: 301;
-    position:absolute;
-    top: 20px;
-    right: 20px;
-    width: 120px;
-}
-
-#socials img {
-    height: 25px;
-    padding:5px;
-}
-
-
-
-#page {
-    
-    border: none;
-    overflow: hidden;
-    color: #6E6D62;
-    font-family: Helvetica,Arial,sans-serif;
-    font-size: 9pt;
-    font-weight:normal;
-    line-height: 18pt;
-    letter-spacing: 1px;
-    padding-left: 10px;
-    padding-right: 10px;
-    text-align: justify;
-    background: none;
-}
-
-@media only screen and (min-width: 601px) {
-  #page {
-        width: 70%;
-  }
-}
-@media only screen and (max-width: 600px) {
-  #page {
-        width: 90%;
-  }
-}
-
-.targetDiv{
-	display:none;
-}  
-
-.box1, .box2, .box3 {
-    
-  margin: auto;
-	height: 100%;
-	overflow: hidden;
-	padding: 15px;
-	margin: 15px;
-	text-align: justify;
-    
-}
-
-a:link, a:active, a:visited, a, a b {
-
-    color: #e8abb2;
-
-    text-decoration: none;
-
-}
-
-
-a.navtab {
-
-    border-radius: 13px;
-
-    display: inline-block;
-
-    color: #4f4f4f;
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
-    transition:.5s;
-
-    border: 1px solid #4f4f4f;
-
-    background: rgba(255, 255, 255, 1) ;
-
-
-    font-family: 'inconsolata','andale mono','Lucida Console','verdana';
-
-    letter-spacing: 1.5px;
-
-    text-transform: uppercase;
-
-    text-align: center;
-
-    text-decoration: none;
-    font-weight: lighter;
-
-    padding: 3px;
-    padding-left: 10px;
-     padding-right: 10px;
-
-    margin: 10px;
-    
-
-}
-
-
-
-a.navtab:hover {
-    color: #adadad;
-    border: 1px solid #adadad;
-}
-
-
-a.showSingle, a.reqbutton {
-
-	display: inline-block;
-	width: 100px;
-	background: #F8F8F8;
-	font-size: 9pt;
-	margin:5px;
-	font-family: 'inconsolata','andale mono','Lucida Console','verdana';
-	font-weight: bold;
-	text-transform: uppercase;
-	text-align: center;
-}
-
-
-.header {
-    position: absolute;
-	top: 0px;
-	left: 0px;
-	width: 100%;
-	height: 150px;
-	background: #fce3e6;
-	border-bottom: 1px solid #6E6D62;
-    z-index:300;
-    text-align: justify;
-
-}
-
-
-.h1 {
-    border-bottom: 2px dashed #fce3e6;
-
-    text-align: left;
-
-    font-size: 18pt;
-
-    color: #8a8a8a;
-
-    line-height: 10px;
-
-    letter-spacing: 1.5px;
-        font-weight: lighter;
-
-
-    font-family: 'courier', 'inconsolata','andale mono','Lucida Console', 'monospace';
-
-}
-
-.h2 {
-
-    color: #8a8a8a;
-
-    font-family: 'georgia';
-
-    letter-spacing: -0.5pt;
-
-    font-style: italic;
-    display: inline;
-
-    
-
-}
-.h3 {
-	font-size: 13pt;
-	font-family: 'inconsolata','andale mono','Lucida Console','verdana';
-	font-weight: bold;
-	text-transform: uppercase;
-	text-align: center;
-
-}
-/* https://github.com/maoberlehner/perfundo  */
-
- .perfundo__overlay {
-     
-	 display: flex;
-	 visibility: hidden;
-	 position: fixed;
-	 top: 0;
-	 right: 0;
-	 bottom: 0;
-	 left: 0;
-	 z-index: 1000;
-	 justify-content: center;
-	 align-items: center;
-  background-color: rgba(252,227,230, 0.8);
-  
-  
-}
-
- .perfundo__overlay:target, .perfundo__overlay.is-active {
-	 visibility: visible;
-
-}
-
- .perfundo__overlay img {
- height: 70%;
-	
-}
- .perfundo__control {
-	 position: absolute;
-}
- .perfundo__control, .perfundo__control:visited {
-	 color: #fff;
-	  font-size: 25pt;
-	/* [3] */
-}
- .perfundo__close {
-	 top: 1em;
-	 right: 1em;
-}
-
-
-</style>
-<body>
-
-<div id="socials">
-    <a href="https://twitter.com/luckcapsule"><img src="https://i.imgur.com/XYIHrWm.png"></a>  
-    <a href="https://www.instagram.com/luckcapsule/"><img src="https://i.imgur.com/9bMiU04.png"></a>
-    <a href="https://www.twitch.tv/luckcapsule"><img src="https://i.imgur.com/rIwRZ1L.png"></a>
+<div class="page-container">
+  <div class="img-gallery">
+    <div class="img-gallery__item">
+      <figure>
+        <img src="https://picsum.photos/id/94/1280/1920" width="1280" height="1920" alt="Image #1" />
+        <figcaption>Image #1</figcaption>
+      </figure>
+    </div>
+    <div class="img-gallery__item">
+      <figure>
+        <img src="https://picsum.photos/id/102/1920/1280" width="1920" height="1280" alt="Image #2" />
+        <figcaption>Image #2</figcaption>
+      </figure>
+    </div>
+    <div class="img-gallery__item">
+      <figure>
+        <img src="https://picsum.photos/id/107/960/400" width="960" height="400" alt="Image #3" />
+        <figcaption>Image #3</figcaption>
+      </figure>
+    </div>
+    <div class="img-gallery__item">
+      <figure>
+        <img src="https://picsum.photos/id/74/1280/540" width="1280" height="540" alt="Image #4" />
+        <figcaption>Image #4</figcaption>
+      </figure>
+    </div>
+    <div class="img-gallery__item">
+      <figure>
+        <img src="https://picsum.photos/id/35/480/540" width="480" height="540" alt="Image #5" />
+        <figcaption>Image #5</figcaption>
+      </figure>
+    </div>
+    <div class="img-gallery__item">
+      <figure>
+        <img src="https://picsum.photos/id/49/960/960" width="960" height="960" alt="Image #6" />
+        <figcaption>Image #6</figcaption>
+      </figure>
+    </div>
+    <div class="img-gallery__item">
+      <figure>
+        <img src="https://picsum.photos/id/57/1024/768" width="1024" height="768" alt="Image #7" />
+        <figcaption>Image #7</figcaption>
+      </figure>
+    </div>
+    <div class="img-gallery__item">
+      <figure>
+        <img src="https://picsum.photos/id/38/450/400" width="450" height="400" alt="Image #8" />
+        <figcaption>Image #8</figcaption>
+      </figure>
+    </div>
+    <div class="img-gallery__item">
+      <figure>
+        <img src="https://picsum.photos/id/49/1920/1080" width="1920" height="1080" alt="Image #9" />
+        <figcaption>Image #9</figcaption>
+      </figure>
+    </div>
+    <div class="img-gallery__item">
+      <figure>
+        <img src="https://picsum.photos/id/99/1080/1920" width="1080" height="1920" alt="Image #10" />
+        <figcaption>Image #10</figcaption>
+      </figure>
     </div>
 
-    <div class="header"><b><center><div id="fithead"><a href="/"><BR><p class="h2"><b>Luck Capsule</b></div></p></a>
-
-<div class="navtab" id="fitnav"> <center>
-
-
-
-<a href="/gallery" class="navtab">gallery</a>
-
-
-<a href="/commissions" class="navtab">commissions</a>
-
-
-<a href="/contact" class="navtab">contact</a>
-
-</center>
-
-
-<br><BR>
-
-</div>
-
-</div>
-
-<div id="page" style="position: absolute; top:0px; left: 0; 
-  right: 0; 
-  margin-left: auto; 
-  margin-right: auto;">
-
-<div class="box" style="margin-top:200px;">
-<center>
-
-<a  class="showSingle" target="1">Illustration</a>
-<a  class="showSingle" target="2">Vtuber</a>
-<a  class="showSingle" target="3">Terms</a>
-<BR><BR>
-
-</center>
-</div>
-
-<div id="box1" class="targetDiv">
-
- <BR> 
-<p class="h1">Art Commissions </p>
-
-<p class="h3"> Icons/Emotes</p>
-<center><table>
-        
-  <tr>
-<th>$25 each</th>
-  </tr>
-</table>
-<BR><p class="h3"> Character illustration</p>
-   <div class="perfundo">
-
-   <a href="#cap">
-    <img src="https://i.imgur.com/Eb1cg88.png" height="150">
-  </a>
-  <div id="cap" class="perfundo__overlay">
-
-    <a href="#close" class="perfundo__close perfundo__control">✕</a>
-    
-    <img src=https://i.imgur.com/Eb1cg88.png>
-    
-  </div>
-  
-  <a href="#unicorn">
-    <img src="https://i.imgur.com/YDEyhOq.png" height="150">
-  </a>
- 
-  <div id="unicorn" class="perfundo__overlay">
-
-    <a href="#close" class="perfundo__close perfundo__control">✕</a>
-    
-    <img src=https://i.imgur.com/YDEyhOq.png>
-    
+    <div class="img-gallery__item">
+      <figure>
+        <img src="https://picsum.photos/id/31/640/480" width="1280" height="1920" alt="Image #11" />
+        <figcaption>Image #11</figcaption>
+      </figure>
+    </div>
+    <div class="img-gallery__item">
+      <figure>
+        <img src="https://picsum.photos/id/26/800/600" width="800" height="600" alt="Image #12" />
+        <figcaption>Image #12</figcaption>
+      </figure>
+    </div>
+    <div class="img-gallery__item">
+      <figure>
+        <img src="https://picsum.photos/id/23/960/400" width="960" height="400" alt="Image #13" />
+        <figcaption>Image #13</figcaption>
+      </figure>
+    </div>
+    <div class="img-gallery__item">
+      <figure>
+        <img src="https://picsum.photos/id/41/1280/540" width="1280" height="540" alt="Image #14" />
+        <figcaption>Image #14</figcaption>
+      </figure>
+    </div>
+    <div class="img-gallery__item">
+      <figure>
+        <img src="https://picsum.photos/id/52/480/540" width="480" height="540" alt="Image #15" />
+        <figcaption>Image #15</figcaption>
+      </figure>
+    </div>
+    <div class="img-gallery__item">
+      <figure>
+        <img src="https://picsum.photos/id/61/960/960" width="960" height="960" alt="Image #16" />
+        <figcaption>Image #16</figcaption>
+      </figure>
+    </div>
+    <div class="img-gallery__item">
+      <figure>
+        <img src="https://picsum.photos/id/17/1024/768" width="1024" height="768" alt="Image #17" />
+        <figcaption>Image #17</figcaption>
+      </figure>
+    </div>
+    <div class="img-gallery__item">
+      <figure>
+        <img src="https://picsum.photos/id/18/450/400" width="450" height="400" alt="Image #18" />
+        <figcaption>Image #18</figcaption>
+      </figure>
+    </div>
+    <div class="img-gallery__item">
+      <figure>
+        <img src="https://picsum.photos/id/93/1920/1080" width="1920" height="1080" alt="Image #19" />
+        <figcaption>Image #19</figcaption>
+      </figure>
+    </div>
+    <div class="img-gallery__item">
+      <figure>
+        <img src="https://picsum.photos/id/20/1080/1920" width="1080" height="1920" alt="Image #20" />
+        <figcaption>Image #20</figcaption>
+      </figure>
+    </div>
+    <div class="img-gallery__item">
+      <figure>
+        <img src="https://picsum.photos/id/60/500/300" width="500" height="300" alt="Image #21" />
+        <figcaption>Image #21</figcaption>
+      </figure>
+    </div>
+    <div class="img-gallery__item">
+      <figure>
+        <img src="https://picsum.photos/id/70/450/400" width="450" height="400" alt="Image #22" />
+        <figcaption>Image #22</figcaption>
+      </figure>
+    </div>
   </div>
 </div>
-
-<BR>
-<table>
-        
-  <tr>
-        <th></th>
-    <th>Simple</th>
-    <th>Painted</th>
-  </tr>
-  <tr>
-         <td>Bust</td>
-    <td>$30</td>
-    <td>$45</td>
-  </tr>
-  <tr>
-         <td>Halfbody</td>
-    <td>$45</td>
-    <td>$60</td>
-  </tr>
-    <tr>
-    <td>Fullbody</td>
-    <td>$60</td>
-    <td>$75</td>
-  </tr>
-</table>
-<BR>
-<B>Complicated design (eg. Genshin) +$10
-<br>Additional characters +30% price
-<br>Additional fee for commercial illustrations</B>
-    <BR><BR>
-    
-<table>
-   
-  <tr>
-
-    <th>Will draw</th>
-    <th>Won't draw</th>
-  </tr>
-  <tr>
-
-    <td>furry</td>
-    <td>mecha</td>
-  </tr>
-  <tr>
-   
-    <td>mild nsfw</td>
-    <td>elderly</td>
-  </tr>
-</table></center>
-<BR><p class="h3"> Process</p>
-<b>1.</b> Please read <a href="#terms">terms</a>.
-<BR><b>2.</b> Submit request via the form, if accepted I will contact you with pricing.
-<BR><b>3.</b> Payment will be made through Paypal before I start the piece. Refunds will only be provided if I am unable to complete the commission.
-<BR><b>4.</b> I will send a sketch progress update, you may request changes at this stage. After the piece is completed only minor changes can be made.
-<BR><b>5.</b> Turnaround time is around 2 weeks.
-
-<BR><BR>
-  <CENTER><a href="https://forms.gle/rzs1onBaV4BCfQrj7" class="reqbutton">SUBMIT REQUEST</a></CENTER>
-  <BR><BR>
-</div>
-
-
-<a name="vtuber"></a><div id="box2" class="targetDiv">
-
- <BR> 
-
-<p class="h1">Commissions</p>
-
-<p class="h3"> Vtuber/Live2d Model</p>
-
-<center>
-<table>
-        
-  <tr>
-        <th></th>
-    <th>Art only</th>
-    <th>Art and rig</th>
-  </tr>
-
-  <tr>
-         <td>Halfbody</td>
-    <td>$300</td>
-    <td>$600</td>
-  </tr>
-    <tr>
-    <td>Fullbody</td>
-    <td>$500</td>
-    <td>$800</td>
-  </tr>
-</table>
-
-<B>☆ Complex designs may have an additional charge<Br>☆ Please note I can only provide basic expressions like sad/angry, at this time I do not offer complex expressions such as waving hello</B>
-</center>
-
-<BR><p class="h3"> Process (art only)</p>
-<b>1.</b> Please read <a href="#terms">terms</a>.
-<BR><b>2.</b> Submit request via the form. Please have references, I am not offering design services, only art and rig. If accepted I will contact you with pricing.
-<BR><b>3.</b> Payment for half of full price will be made through Paypal before I start the piece. The other half will be paid at completion. If you cancel the commission after it has started I can only provide a partial refund (50% of initial payment).
-<BR><b>4.</b> I will send a sketch progress update, you may request changes at this stage. Feel free to request updates and changes while I am working on the piece. After the piece is completed only minor changes can be made.
-<BR><b>5.</b> Full process for art is around 2 months. When it is complete you will provde the other half of the payment and I will send your file. 
-
-<BR><p class="h3"> Process (art + rig)</p>
-<b>1.</b> Please read <a href="#terms">terms</a>.
-<BR><b>2.</b> Submit request via the form. Please have references, I am not offering design services, only art and rig. If accepted I will contact you with pricing.
-<BR><b>3.</b> Payment for art portion will be made through Paypal before I start the piece. If you cancel the commission after it has started I can only provide a partial refund (50% of initial payment). After art is completed there will be no refunds on this payment.
-<BR><b>4.</b> I will send a sketch progress update, you may request changes at this stage. Feel free to request updates and changes while I am working on the piece. After the piece is completed only minor changes can be made.
-<BR><b>5.</b> After art is completed you will submit payment for rigging. I will rig head xyz, body xz, breathing, mouth, eye, physics (hair, eye, clothes), and 3 basic expressions (you pick expressions).
-<BR><b>4.</b> Full process for art + rig is around 3 months. If you need help setting it up on Vtube Studio I can advise, but am not familiar with other programs like Prpr.
-
-<BR><BR>
-  <CENTER><a href="https://forms.gle/b6eg4v3dNtcFdbCq6" class="reqbutton">SUBMIT REQUEST</a></CENTER>  
-  <BR><BR>
-</div>
-
-
-    <a name="terms"></a><div id="box3" class="targetDiv">
-
- <BR> 
-
-<p class="h1">Terms of Service</p>
-<b>I have the right to refuse your request.</b> I can reject your commission request for any reason, especially if I feel I cannot execute your request well or do not have time to complete it.
-<BR><BR>
-<b>Payments will be done through Paypal only.</b> 
-
-<BR><BR>
-<b>There are no refunds unless I am unable to complete your request or if work on the piece hasn't been started.</b> In the case of Vtuber/Live2d commissions, if you decide to cancel I can offer 50% refund on initial payments, ONLY if they are not completed (see commission page for details). No refunds will be given for completed works.
-
-<BR><BR>
-<b>By default I will use completed commissions as art examples on my social media and website.</b> Please state if you do not want me posting your requested work online.
-
-<BR><BR>
-<b>Do not claim works as your own.</b>
-
-<BR><BR>
-<b>See commission pages for details on pricing, turnaround time, and process.</b>
-
-<BR><BR>
-</div>
-
-</div>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.2.0/jquery.fittext.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<script src="jquery.fittext.js"></script>
-
-<script>jQuery("#fitnav").fitText(4, { minFontSize: '4px', maxFontSize: '13px' });
-</script>
-<script>jQuery("#fithead").fitText(1, { minFontSize: '20px', maxFontSize: '32px' });
-</script>
-
-<script>jQuery(function(){
-      
-        jQuery('.showSingle').click(function(){
-              jQuery('.targetDiv').hide();
-              jQuery('#box'+$(this).attr('target')).show();
-        });
-});
-
-        $("div.showSingle").hide();</script>
-
-</body>
-
