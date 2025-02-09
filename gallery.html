@@ -1,400 +1,11 @@
-
-<style>
-
-body {
-    margin:  0px;
-
-    background: #fff;
-
-  display: flex;
-
-  justify-content: center;
-
-  flex-direction: column;
-}
-
-
-
-#page {
-position: absolute;
-    top: 175px;
-    left: 0px;
-
-    margin-right: auto;
-
-    margin-left: auto;
-
-    border: none;
-    width: 100%;
-    overflow: hidden;
-
-    color: #6E6D62;
-
-    font-family: Helvetica,Arial,sans-serif;
-    
-    font-size: 9pt;
-
-    letter-spacing: 1px;
-
-    text-align: justify;
-
-    background: none;
-
-
-    padding: none;
-    overflow: none;
-    -ms-overflow-style: none; 
-    scrollbar-width: none;  
-}
-
-
-
-.gallery {
-
-	columns: 3;
-
-	column-gap: 5PX;
-	padding: 20;
-    
-    border: none;
-
-    width: 70%;
-    
-	margin: 0 auto;
-
-	display: inline-block;
-
-    list-style: none;
-
-    overflow: hidden;
-
-
-}
-.gallerypic {}
-.gallery img {
-opacity: 1.0;
-    transition: opacity 1s ease-in-out;
-
-    position: relative;
-
-    background: none;
-
-    border-radius: 10px;
-    width: 95%;
-    margin: 10px;
-}
-
-.gallery img:hover {
-    opacity: 0.7;
-    transition: opacity 0.5s ease-in-out;
-
-
-}
-
-
-a:link, a:active, a:visited, a, a b {
-
-    color: #e8abb2;
-
-    text-decoration: none;
-
-}
-
-
-a.navtab {
-
-  border-radius: 13px;
-
-    display: inline-block;
-
-    color: #4f4f4f;
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
-    transition:.5s;
-
-    border: 1px solid #4f4f4f;
-
-    background: rgba(255, 255, 255, 1) ;
-
-
-    font-family: 'inconsolata','andale mono','Lucida Console','verdana';
-
-    letter-spacing: 1.5px;
-
-    text-transform: uppercase;
-
-    text-align: center;
-
-    text-decoration: none;
-    font-weight: lighter;
-
-    padding: 3px;
-    padding-left: 10px;
-     padding-right: 10px;
-
-    margin: 10px;
-    
-
-}
-
-a.navtab:hover {
-	color: #adadad;
-    border: 1px solid #adadad;
-    
-}
-
-.header {
-    position: absolute;
-	top: 0px;
-	left: 0px;
-	width: 100%;
-	height: 150px;
-	background: #fce3e6;
-    z-index:300;
-    text-align: justify;
-
-
-}
-
-
-.h1 {
-    border-bottom: 2px dashed #fce3e6;
-
-    text-align: left;
-
-    font-size: 18pt;
-
-    color: #8a8a8a;
-
-    line-height: 10px;
-
-    letter-spacing: 1.5px;
-
-    font-family: 'courier', 'inconsolata','andale mono','Lucida Console', 'monospace';
-
-}
-
-.h2 {
-
-
-    font-size: 32pt;
-
-
-    color: #8a8a8a;
-
-    font-family: 'georgia';
-
-    letter-spacing: -0.5pt;
-
-    font-style: italic;
-    display: inline;
-}
-
-/* https://github.com/maoberlehner/perfundo  */
-
- .perfundo__overlay {
-     
-	 display: flex;
-	 visibility: hidden;
-	 position: fixed;
-	 top: 0;
-	 right: 0;
-	 bottom: 0;
-	 left: 0;
-	 z-index: 999;
-	 justify-content: center;
-	 align-items: center;
-  background-color: rgba(252,227,230, 0.8);
-  
-  
-}
-
- .perfundo__overlay:target, .perfundo__overlay.is-active {
-	 visibility: visible;
-
-}
-
- .perfundo__overlay img {
-	width: 40%;
-	
-}
-
- .perfundo__overlay img:hover {
-	opacity: 1.0;
-}
-
- .perfundo__control {
-	 position: absolute;
-}
- .perfundo__control, .perfundo__control:visited {
-	 color: #fff;
-	  font-size: 25pt;
-	/* [3] */
-}
- .perfundo__close {
-	 top: 1em;
-	 right: 1em;
-}
-
-@media only screen and (max-width: 400px) {
-a.navtab{
-        display:none;
-  }
-
-  :root {
-  --primColor: #ffff;
-  --secoColor: #555555;
-  --cornerRad: 4px;
-}
-details {
-
-  margin: 20px;
-  z-index: 999;
-}
-summary {
-  writing-mode: vertical-lr;
-  text-align: center;
-  padding: 12px 10px;
-  width: 23px;
-  height: 17px;
-  background-color: var(--primColor);
-  border: 1px solid var(--secoColor);
-  border-radius: var(--cornerRad);
-  color: var(--secoColor);
-  cursor: pointer;
-  user-select: none;
-  outline: none;
-  transition: transform 200ms ease-in-out 0s;
-}
-summary::before,
-summary::after {
-  position: static;
-  top: 0;
-  left: 0;
-}
-summary::before {
-  content: "";
-}
-summary::after {
-  content: "|||";
-  letter-spacing: 1px;
-  
-}
-summary:hover {
-  transform: scale(1.1);
-}
-summary::marker {
-  font-size: 0;
-}
-summary::-webkit-details-marker {
-  display: none;
-}
-details[open] .menu {
-  animation-name: menuAnim;
-}
-details[open] summary::before {
-  content: "|||";
-  
-  letter-spacing: 1px;
-}
-details[open] summary::after {
-  content: "";
-}
-.menu {
-  height: 0;
-  width: fit-content;
-  border: 1px solid var(--secoColor);
-  border-radius: var(--cornerRad);
-  background-color: var(--primColor);
-  margin-top: 8px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
-  animation: closeMenu 300ms ease-in-out forwards;
-}
-.menu a {
-  padding: 12px 24px;
-  margin: 0 16px;
-  color: var(--secoColor);
-  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-  text-decoration: none;
-  text-align: center;
-  transition: filter 200ms linear 0s;
-}
-.menu a:nth-of-type(1) {
-  padding-top: 24px;
-}
-.menu a:nth-last-of-type(1) {
-  border-bottom: none;
-}
-.menu a:hover {
-  filter: brightness(200%);
-}
-details::before {
-  color: var(--secoColor);
-  position: absolute;
-  margin-left: 80px;
-  padding: 10px 10px;
-  opacity: 0.4;
-}
-details[open]::before {
-  animation: fadeMe 300ms linear forwards;
-}
-@keyframes menuAnim {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: 190px;
-  }
-}
-@keyframes fadeMe {
-  0% {
-    opacity: 0.4;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-}
-
-a.dropdown {
-
-    color: #4f4f4f;
-
-    font-size: 13px;
-
-    font-family: 'inconsolata','andale mono','Lucida Console','verdana';
-
-    letter-spacing: 1.5px;
-
-    text-transform: uppercase;
-
-    text-align: center;
-
-    text-decoration: none;
-    
-    font-weight: lighter;
-
-    padding: 3px;
-
-    margin: 10px;
-
-}
-
-
-
-</style>
-
-<!-- ---------------------------------------------------->
-
-
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel='stylesheet' href='https://unpkg.com/flexmasonry/dist/flexmasonry.css'><link rel="stylesheet" href="./style.css">
+
+</head>
 <body>
-
+<!-- partial:index.partial.html -->
 
 
     
@@ -431,406 +42,349 @@ a.dropdown {
 
 <a name="a"></a>
 
-<ul class="gallery" >
+
+<div class="page-container">
+  <div class="img-gallery">
+    
+    <div class="img-gallery__item">
+    
+  <a href="#squishuv">
+    <img src="https://i.imgur.com/Y5xes2a.png">
+  </a>
+    </div>
+       
+    <div class="img-gallery__item">
+    
+  <a href="#ktchuuu">
+    <img src="https://i.imgur.com/6wtUsbr.png">
+  </a>
+    </div>
+    
+     <div class="img-gallery__item">
+    
+  <a href="#dollya">
+    <img src="https://i.imgur.com/B6e1ilY.jpeg">
+  </a>
+    </div>
     
     
+     <div class="img-gallery__item">
     
-                        <div class="perfundo">
+  <a href="#jane">
+    <img src="https://i.imgur.com/ZBxsfHo.png">
+  </a>
+    </div>
+    
+    
+     <div class="img-gallery__item">
+    
+  <a href="#hanichu">
+    <img src="https://i.imgur.com/eys1IS8.png">
+  </a>
+    </div>
+    
+     
+    
+     <div class="img-gallery__item">
+    
+  <a href="#nikki">
+    <img src="https://i.imgur.com/YHwzFDN.png">
+  </a>
+    </div>
+    
+     
+     <div class="img-gallery__item">
+    
   <a href="#mayo">
     <img src="https://i.imgur.com/awlwT5F.jpeg">
   </a>
-  <div id="mayo" class="perfundo__overlay">
+    </div>
+    
+    
+    <div class="img-gallery__item">
 
- <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
-   <a href="#perfundo-untarget"><img src=https://i.imgur.com/awlwT5F.jpeg</a> 
-    
-  </div>  </div>
-  
-  
-                        <div class="perfundo">
-  <a href="#flayday24">
-    <img src="https://i.imgur.com/lM90N36.png">
-  </a>
-  <div id="flayday24" class="perfundo__overlay">
-
- <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
-   <a href="#perfundo-untarget"><img src=https://i.imgur.com/lM90N36.png></a> 
-    
-  </div>  </div>
-  
-  
-    
-                        <div class="perfundo">
-  <a href="#doki">
+        <a href="#flayday24"><img src="https://i.imgur.com/lM90N36.png">
+</a>
+       
+    </div>
+    <div class="img-gallery__item">
+   
+         <a href="#doki">
     <img src="https://i.imgur.com/7yicbmA.png">
   </a>
-  <div id="doki" class="perfundo__overlay">
-
- <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
-   <a href="#perfundo-untarget"><img src=https://i.imgur.com/7yicbmA.png></a> 
-    
-  </div>  </div>
-  
-  
-  
-                       <div class="perfundo">
-  <a href="#whittles">
+     
+   
+    </div>
+    <div class="img-gallery__item">
+<a href="#whittles">
     <img src="https://i.imgur.com/lnp1PFu.png">
   </a>
-  <div id="whittles" class="perfundo__overlay">
-
- <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
-   <a href="#perfundo-untarget"><img src=https://i.imgur.com/lnp1PFu.png></a> 
+    </div>
     
-  </div>  </div>
-  
-  
-  
-                   <div class="perfundo">
-  <a href="#pasith">
+    <div class="img-gallery__item">
+         <a href="#pasith">
     <img src="https://i.imgur.com/pqeiUZd.png">
   </a>
-  <div id="pasith" class="perfundo__overlay">
-
- <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
-   <a href="#perfundo-untarget"><img src=https://i.imgur.com/pqeiUZd.png></a> 
+    </div>
     
-  </div>  </div>
-  
-  
-    
-                 <div class="perfundo">
-  <a href="#mars">
+    <div class="img-gallery__item">
+        <a href="#mars">
     <img src="https://i.imgur.com/JKlouvZ.png">
   </a>
-  <div id="mars" class="perfundo__overlay">
-
- <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
-   <a href="#perfundo-untarget"><img src=https://i.imgur.com/JKlouvZ.png></a> 
-    
-  </div>  </div>
- 
-  
-    
-                 <div class="perfundo">
-  <a href="#peri24">
+     
+    </div>
+      <div class="img-gallery__item">
+        <a href="#peri24">
     <img src="https://i.imgur.com/R3NhrXq.png">
   </a>
-  <div id="peri24" class="perfundo__overlay">
-
- <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
-   <a href="#perfundo-untarget"><img src=https://i.imgur.com/R3NhrXq.png></a> 
+    </div>
     
-  </div>  </div>
-  
-  
-               <div class="perfundo">
-  <a href="#fts">
+    <div class="img-gallery__item">
+        <a href="#fts">
     <img src="https://i.imgur.com/1CUWJQ1.png">
   </a>
-  <div id="fts" class="perfundo__overlay">
-
- <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
-   <a href="#perfundo-untarget"><img src=https://i.imgur.com/1CUWJQ1.png></a> 
+    </div>
     
-  </div>  </div>
-    
-    
-             <div class="perfundo">
-  <a href="#jirachi">
-    <img src="https://i.imgur.com/OcYFEfS.png">
-  </a>
-  <div id="jirachi" class="perfundo__overlay">
-
- <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
-   <a href="#perfundo-untarget"><img src=https://i.imgur.com/OcYFEfS.png></a> 
-    
-  </div>  </div>
-  
-    
-    
-         <div class="perfundo">
-  <a href="#octavio">
-    <img src="https://i.imgur.com/STLnv05.png">
-  </a>
-  <div id="octavio" class="perfundo__overlay">
-
- <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
-   <a href="#perfundo-untarget"><img src=https://i.imgur.com/STLnv05.png></a> 
-    
-  </div>  </div>
-  
-      
-         <div class="perfundo">
-  <a href="#GB">
+    <div class="img-gallery__item">
+        <a href="#GB">
     <img src="https://i.imgur.com/0GgbjvJ.png">
   </a>
-  <div id="GB" class="perfundo__overlay">
-
- <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
-   <a href="#perfundo-untarget"><img src=https://i.imgur.com/0GgbjvJ.png></a> 
+     
+    </div>
+    <div class="img-gallery__item">
     
-  </div>  </div>
-    
-    
-         <div class="perfundo">
-  <a href="#liomia">
+       <a href="#liomia">
     <img src="https://i.imgur.com/NaJKlXM.png">
   </a>
-  <div id="liomia" class="perfundo__overlay">
-
- <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
-   <a href="#perfundo-untarget"><img src=https://i.imgur.com/NaJKlXM.png></a> 
-    
-  </div>  </div>
-  
-  
-    
-        
-    
-     <div class="perfundo">
-  <a href="#flaybday">
+    </div>
+    <div class="img-gallery__item">
+     <a href="#flaybday">
     <img src="https://i.imgur.com/zGWQNya.png">
   </a>
-  <div id="flaybday" class="perfundo__overlay">
+    </div>
 
- <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
-   <a href="#perfundo-untarget"><img src=https://i.imgur.com/zGWQNya.png></a> 
-    
-  </div>  </div>
-  
-    
- <div class="perfundo">
-  <a href="#miaaa">
+    <div class="img-gallery__item">
+      <a href="#miaaa">
     <img src="https://i.imgur.com/i7SGops.png">
   </a>
-  <div id="miaaa" class="perfundo__overlay">
-
- <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
-   <a href="#perfundo-untarget"><img src=https://i.imgur.com/i7SGops.png></a> 
-    
-  </div>  </div>
+    </div>
   
     
-  
-    
-    
-                           <div class="perfundo">
-  <a href="#teto">
-    <img src="https://i.imgur.com/U9yZRV8.png">
-  </a>
-  <div id="teto" class="perfundo__overlay">
-
- <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
-   <a href="#perfundo-untarget"><img src=https://i.imgur.com/U9yZRV8.png></a> 
-    
-  </div>  </div>
-  
-    
-    
-                       <div class="perfundo">
-  <a href="#flayon">
-    <img src="https://i.imgur.com/h3JEywO.png">
-  </a>
-  <div id="flayon" class="perfundo__overlay">
-
- <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
-   <a href="#perfundo-untarget"><img src=https://i.imgur.com/h3JEywO.png></a> 
-    
-  </div>  </div>
-  
-                             <div class="perfundo">
-  <a href="#gloom">
+    <div class="img-gallery__item">
+      <a href="#gloom">
     <img src="https://i.imgur.com/F2T6BYh.pnghttps://i.imgur.com/F2T6BYh.png">
   </a>
-  <div id="gloom" class="perfundo__overlay">
-
- <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
-   <a href="#perfundo-untarget"><img src=https://i.imgur.com/F2T6BYh.png></a> 
-    
-  </div>  </div>
-  
+    </div>
   
     
-    
-                   <div class="perfundo">
-  <a href="#startingsoon">
-    <img src="https://i.imgur.com/8PQzkBD.png">
-  </a>
-  <div id="startingsoon" class="perfundo__overlay">
-
- <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
-   <a href="#perfundo-untarget"><img src=https://i.imgur.com/8PQzkBD.png></a> 
-    
-  </div>  </div>
-  
-  
-  
-    
-               <div class="perfundo">
-  <a href="#green">
+    <div class="img-gallery__item">
+      <a href="#green">
     <img src="https://i.imgur.com/WIDKfyE.png">
   </a>
-  <div id="green" class="perfundo__overlay">
-
- <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
-   <a href="#perfundo-untarget"><img src=https://i.imgur.com/WIDKfyE.png></a> 
-    
-  </div>  </div>
-  
-  
-                 <div class="perfundo">
-  <a href="#chibicap">
-    <img src="https://i.imgur.com/lcal2jZ.png">
-  </a>
-  <div id="chibicap" class="perfundo__overlay">
-
- <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
-   <a href="#perfundo-untarget"><img src=https://i.imgur.com/lcal2jZ.png></a> 
-    
-  </div>  </div>
+    </div>
   
     
-    
-        
-                    <div class="perfundo">
-  <a href="#meloco">
+    <div class="img-gallery__item">
+     <a href="#meloco">
     <img src="https://i.imgur.com/uL67pod.png">
   </a>
-  <div id="meloco" class="perfundo__overlay">
-
- <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
-   <a href="#perfundo-untarget"><img src=https://i.imgur.com/uL67pod.png></a> 
+    </div>
+  
     
-  </div>  </div>
-  
-  
-  
-  
-      
-                    <div class="perfundo">
-  <a href="#grusha">
+    <div class="img-gallery__item">
+     <a href="#grusha">
     <img src="https://i.imgur.com/SdmJyki.png">
   </a>
-  <div id="grusha" class="perfundo__overlay">
-
- <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
-   <a href="#perfundo-untarget"><img src=https://i.imgur.com/SdmJyki.png></a> 
+    </div>
+  
     
-  </div>  </div>
-    
-    
-    
-    
-                <div class="perfundo">
-  <a href="#mushroom">
-    <img src="https://i.imgur.com/OucPQWx.png">
-  </a>
-  <div id="mushroom" class="perfundo__overlay">
-
- <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
-   <a href="#perfundo-untarget"><img src=https://i.imgur.com/OucPQWx.png></a> 
-    
-  </div>  </div>
-    
-    
-
-    
-    
-        <div class="perfundo">
-  <a href="#perilingerie">
-    <img src="https://i.imgur.com/fM86kit.png">
-  </a>
-  <div id="perilingerie" class="perfundo__overlay">
-
- <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
-   <a href="#perfundo-untarget"><img src=https://i.imgur.com/fM86kit.png></a> 
-    
-  </div>  </div>
-    
-
-    
-    
-    <div class="perfundo">
-  <a href="#aubrey">
+    <div class="img-gallery__item">
+      <a href="#aubrey">
     <img src="https://i.imgur.com/v7eXVaD.jpg">
   </a>
-  <div id="aubrey" class="perfundo__overlay">
-
- <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
-   <a href="#perfundo-untarget"><img src=https://i.imgur.com/v7eXVaD.jpg></a> 
+    </div>
+  
     
-  </div>
-</div>
-    
-
-    
-    
-    
-<div class="perfundo">
-  <a href="#sweat">
+    <div class="img-gallery__item">
+       <a href="#sweat">
     <img src="https://i.imgur.com/XGzjgK4.png">
   </a>
-  <div id="sweat" class="perfundo__overlay">
+    </div>
+
+  </div>
+</div>
+
+ <center>
+         
+       <div id="squishuv" class="perfundo__overlay">
 
  <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
-   <a href="#perfundo-untarget"><img src=https://i.imgur.com/XGzjgK4.png></a> 
+   <a href="#perfundo-untarget"> <img src="https://i.imgur.com/Y5xes2a.png"></a> 
+     </div>
+   
     
-  </div>
-</div>
-    
+       <div id="ktchuuu" class="perfundo__overlay">
 
+ <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
+   <a href="#perfundo-untarget"> <img src="https://i.imgur.com/6wtUsbr.png"></a> 
+     </div>
+   
+   
+   <div id="dollya" class="perfundo__overlay">
 
-    
-    
-     <div class="perfundo">
-  <a href="#momoko">
-    <img src="https://i.imgur.com/1TA8ZZ0.png">
-  </a>
-  <div id="momoko" class="perfundo__overlay">
+ <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
+   <a href="#perfundo-untarget"> <img src="https://i.imgur.com/B6e1ilY.jpeg"></a> 
+     </div>
+   
+      <div id="jane" class="perfundo__overlay">
 
-        <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
-   <a href="#perfundo-untarget"><img src=https://i.imgur.com/1TA8ZZ0.png></a> 
-    
-  </div>
-</div>
-    
+ <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
+   <a href="#perfundo-untarget"> <img src="https://i.imgur.com/ZBxsfHo.png"></a> 
+     </div>
+   
+   
+   <div id="hanichu" class="perfundo__overlay">
 
-    
-     <div class="perfundo">
-  <a href="#tsui">
-    <img src="https://i.imgur.com/H1E8IEV.png">
-  </a>
-  <div id="tsui" class="perfundo__overlay">
-
-        <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
-   <a href="#perfundo-untarget"><img src=https://i.imgur.com/H1E8IEV.png></a> 
-    
-  </div>
-</div>
-    
-
-
-
-
-
-
-
-</center>
-
-</ul>
-
-
-</div>
-
-
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.2.0/jquery.fittext.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<script src="jquery.fittext.js"></script>
-<script>jQuery("#fitnav").fitText(4, { minFontSize: '4px', maxFontSize: '13px' });
-</script>
+ <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
+   <a href="#perfundo-untarget"> <img src="https://i.imgur.com/eys1IS8.png"></a> 
+     </div>
+   
      
+   <div id="nikki" class="perfundo__overlay">
+
+ <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
+   <a href="#perfundo-untarget"> <img src="https://i.imgur.com/YHwzFDN.png"></a> 
+     </div>
+   
      
+   <div id="mayo" class="perfundo__overlay">
+
+ <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
+   <a href="#perfundo-untarget"><img src=https://i.imgur.com/awlwT5F.jpeg></a> 
+     </div>
+   
+       
+   <div id="flayday24" class="perfundo__overlay">
+
+ <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
+   <a href="#perfundo-untarget"><img src="https://i.imgur.com/lM90N36.png"></a> 
+     </div>
+   
+       
+   <div id="doki" class="perfundo__overlay">
+
+ <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
+   <a href="#perfundo-untarget"><img src="https://i.imgur.com/7yicbmA.png"></a> 
+     </div>
+   
+       
+   <div id="whittles" class="perfundo__overlay">
+
+ <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
+   <a href="#perfundo-untarget"><img src="https://i.imgur.com/lnp1PFu.png"></a> 
+     </div>
+   
+       
+   <div id="pasith" class="perfundo__overlay">
+
+ <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
+   <a href="#perfundo-untarget"><img src="https://i.imgur.com/pqeiUZd.png"></a> 
+     </div>
+   
+       
+   <div id="mars" class="perfundo__overlay">
+
+ <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
+   <a href="#perfundo-untarget"><img src="https://i.imgur.com/JKlouvZ.png"></a> 
+     </div>
+   
+       
+   <div id="peri24" class="perfundo__overlay">
+
+ <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
+   <a href="#perfundo-untarget"><img src="https://i.imgur.com/R3NhrXq.png"></a> 
+     </div>
+   
+       
+   <div id="fts" class="perfundo__overlay">
+
+ <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
+   <a href="#perfundo-untarget"> <img src="https://i.imgur.com/1CUWJQ1.png"></a> 
+     </div>
+   
+       
+   <div id="liomia" class="perfundo__overlay">
+
+ <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
+   <a href="#perfundo-untarget"><img src="https://i.imgur.com/NaJKlXM.png"></a> 
+     </div>
+   
+       
+   <div id="green" class="perfundo__overlay">
+
+ <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
+   <a href="#perfundo-untarget"> <img src="https://i.imgur.com/WIDKfyE.png">
+  </a></a> 
+     </div>
+   
+       
+   <div id="meloco" class="perfundo__overlay">
+
+ <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
+   <a href="#perfundo-untarget"> <img src="https://i.imgur.com/uL67pod.png"></a> 
+     </div>
+   
+       
+   <div id="miaaa" class="perfundo__overlay">
+
+ <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
+   <a href="#perfundo-untarget"><img src="https://i.imgur.com/NaJKlXM.png"></a> 
+     </div>
+   
+       
+   <div id="grusha" class="perfundo__overlay">
+
+ <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
+   <a href="#perfundo-untarget">  <img src="https://i.imgur.com/SdmJyki.png"></a> 
+     </div>
+   
+       
+   <div id="gloom" class="perfundo__overlay">
+
+ <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
+   <a href="#perfundo-untarget"> <img src="https://i.imgur.com/F2T6BYh.pnghttps://i.imgur.com/F2T6BYh.png"></a> 
+     </div>
+     
+       
+   <div id="aubrey" class="perfundo__overlay">
+
+ <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
+   <a href="#perfundo-untarget"> <img src="https://i.imgur.com/v7eXVaD.jpg"></a> 
+     </div>
+     
+       
+   <div id="sweat" class="perfundo__overlay">
+
+ <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
+   <a href="#perfundo-untarget"> <img src="https://i.imgur.com/XGzjgK4.png"></a> 
+     </div>
+       
+       
+   <div id="GB" class="perfundo__overlay">
+
+ <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
+   <a href="#perfundo-untarget"> <img src="https://i.imgur.com/0GgbjvJ.png"></a> 
+     </div>    
+       
+   <div id="flaybday" class="perfundo__overlay">
+
+ <a href="#perfundo-untarget" class="perfundo__close perfundo__control">✕</a>
+   <a href="#perfundo-untarget"> <img src="https://i.imgur.com/zGWQNya.png"></a> 
+     </div>
+   
+   </center>
+<!-- partial -->
+  <script src='https://unpkg.com/flexmasonry/dist/flexmasonry.js'></script><script  src="./script.js"></script>
+
 </body>
+</html>
