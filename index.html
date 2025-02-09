@@ -1,152 +1,335 @@
-<!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Vertical masonry /w Flexbox (Classic Captions)</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel='stylesheet' href='https://unpkg.com/flexmasonry/dist/flexmasonry.css'><link rel="stylesheet" href="./style.css">
 
-</head>
+
+<style>
+
+
+body {
+    margin:  0px;
+    background: #fff;
+
+  display: flex;
+
+  justify-content: center;
+
+  flex-direction: column;
+}
+
+
+#page {
+position: absolute;
+    top: 175px;
+    left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    border: none;
+    width: 100%;
+    overflow: hidden;
+    color: #6E6D62;
+    font-family: Helvetica,Arial,sans-serif;
+        font-size: 9pt;
+    letter-spacing: 1px;
+
+    text-align: justify;
+    background: none;
+}
+
+
+
+a:link, a:active, a:visited, a, a b {
+
+    color: #e8abb2;
+
+    text-decoration: none;
+
+}
+
+
+a.navtab {
+
+  border-radius: 13px;
+
+    display: inline-block;
+
+    color: #4f4f4f;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+
+    border: 1px solid #4f4f4f;
+
+    background: rgba(255, 255, 255, 1) ;
+    font-family: 'inconsolata','andale mono','Lucida Console','verdana';
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    font-weight: lighter;
+
+    padding: 3px;
+    padding-left: 10px;
+     padding-right: 10px;
+    margin: 10px;
+    
+}
+
+
+a.navtab:hover {
+    color: #adadad;
+    border: 1px solid #adadad;
+}
+
+.header {
+    position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 150px;
+	background: #fce3e6;
+    z-index:300;
+    text-align: justify;
+
+
+}
+
+
+
+.h1 {
+    border-bottom: 2px dashed #fce3e6;
+
+    text-align: left;
+
+    font-size: 18pt;
+
+    color: #8a8a8a;
+
+    line-height: 10px;
+
+    letter-spacing: 1.5px;
+
+    font-family: 'courier', 'inconsolata','andale mono','Lucida Console', 'monospace';
+
+}
+
+.h2 {
+
+    text-align: center;
+
+    font-size: 32pt;
+
+    line-height: 10px;
+
+    color: #8a8a8a;
+
+    font-family: 'georgia';
+
+    letter-spacing: -0.5pt;
+
+    font-style: italic;
+
+    padding: none;
+
+    
+
+}
+
+@media only screen and (max-width: 400px) {
+a.navtab{
+        display:none;
+  }
+
+  :root {
+  --primColor: #ffff;
+  --secoColor: #555555;
+  --cornerRad: 4px;
+}
+details {
+
+  margin: 20px;
+  z-index: 999;
+}
+summary {
+  writing-mode: vertical-lr;
+  text-align: center;
+  padding: 12px 10px;
+  width: 23px;
+  height: 17px;
+  background-color: var(--primColor);
+  border: 1px solid var(--secoColor);
+  border-radius: var(--cornerRad);
+  color: var(--secoColor);
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  transition: transform 200ms ease-in-out 0s;
+}
+summary::before,
+summary::after {
+  position: static;
+  top: 0;
+  left: 0;
+}
+summary::before {
+  content: "";
+}
+summary::after {
+  content: "|||";
+  letter-spacing: 1px;
+  
+}
+summary:hover {
+  transform: scale(1.1);
+}
+summary::marker {
+  font-size: 0;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+details[open] .menu {
+  animation-name: menuAnim;
+}
+details[open] summary::before {
+  content: "|||";
+  
+  letter-spacing: 1px;
+}
+details[open] summary::after {
+  content: "";
+}
+.menu {
+  height: 0;
+  width: fit-content;
+  border: 1px solid var(--secoColor);
+  border-radius: var(--cornerRad);
+  background-color: var(--primColor);
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  animation: closeMenu 300ms ease-in-out forwards;
+}
+.menu a {
+  padding: 12px 24px;
+  margin: 0 16px;
+  color: var(--secoColor);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  text-align: center;
+  transition: filter 200ms linear 0s;
+}
+.menu a:nth-of-type(1) {
+  padding-top: 24px;
+}
+.menu a:nth-last-of-type(1) {
+  border-bottom: none;
+}
+.menu a:hover {
+  filter: brightness(200%);
+}
+details::before {
+  color: var(--secoColor);
+  position: absolute;
+  margin-left: 80px;
+  padding: 10px 10px;
+  opacity: 0.4;
+}
+details[open]::before {
+  animation: fadeMe 300ms linear forwards;
+}
+@keyframes menuAnim {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 190px;
+  }
+}
+@keyframes fadeMe {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+}
+
+a.dropdown {
+
+    color: #4f4f4f;
+
+    font-size: 13px;
+
+    font-family: 'inconsolata','andale mono','Lucida Console','verdana';
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    text-align: center;
+
+    text-decoration: none;
+    
+    font-weight: lighter;
+
+    padding: 3px;
+
+    margin: 10px;
+
+}
+
+
+
+</style>
 <body>
-<!-- partial:index.partial.html -->
-<div class="page-container">
-  <div class="img-gallery">
-    <div class="img-gallery__item">
-      <figure>
-        <img src="https://picsum.photos/id/94/1280/1920" width="1280" height="1920" alt="Image #1" />
-        <figcaption>Image #1</figcaption>
-      </figure>
-    </div>
-    <div class="img-gallery__item">
-      <figure>
-        <img src="https://picsum.photos/id/102/1920/1280" width="1920" height="1280" alt="Image #2" />
-        <figcaption>Image #2</figcaption>
-      </figure>
-    </div>
-    <div class="img-gallery__item">
-      <figure>
-        <img src="https://picsum.photos/id/107/960/400" width="960" height="400" alt="Image #3" />
-        <figcaption>Image #3</figcaption>
-      </figure>
-    </div>
-    <div class="img-gallery__item">
-      <figure>
-        <img src="https://picsum.photos/id/74/1280/540" width="1280" height="540" alt="Image #4" />
-        <figcaption>Image #4</figcaption>
-      </figure>
-    </div>
-    <div class="img-gallery__item">
-      <figure>
-        <img src="https://picsum.photos/id/35/480/540" width="480" height="540" alt="Image #5" />
-        <figcaption>Image #5</figcaption>
-      </figure>
-    </div>
-    <div class="img-gallery__item">
-      <figure>
-        <img src="https://picsum.photos/id/49/960/960" width="960" height="960" alt="Image #6" />
-        <figcaption>Image #6</figcaption>
-      </figure>
-    </div>
-    <div class="img-gallery__item">
-      <figure>
-        <img src="https://picsum.photos/id/57/1024/768" width="1024" height="768" alt="Image #7" />
-        <figcaption>Image #7</figcaption>
-      </figure>
-    </div>
-    <div class="img-gallery__item">
-      <figure>
-        <img src="https://picsum.photos/id/38/450/400" width="450" height="400" alt="Image #8" />
-        <figcaption>Image #8</figcaption>
-      </figure>
-    </div>
-    <div class="img-gallery__item">
-      <figure>
-        <img src="https://picsum.photos/id/49/1920/1080" width="1920" height="1080" alt="Image #9" />
-        <figcaption>Image #9</figcaption>
-      </figure>
-    </div>
-    <div class="img-gallery__item">
-      <figure>
-        <img src="https://picsum.photos/id/99/1080/1920" width="1080" height="1920" alt="Image #10" />
-        <figcaption>Image #10</figcaption>
-      </figure>
-    </div>
+    
 
-    <div class="img-gallery__item">
-      <figure>
-        <img src="https://picsum.photos/id/31/640/480" width="1280" height="1920" alt="Image #11" />
-        <figcaption>Image #11</figcaption>
-      </figure>
-    </div>
-    <div class="img-gallery__item">
-      <figure>
-        <img src="https://picsum.photos/id/26/800/600" width="800" height="600" alt="Image #12" />
-        <figcaption>Image #12</figcaption>
-      </figure>
-    </div>
-    <div class="img-gallery__item">
-      <figure>
-        <img src="https://picsum.photos/id/23/960/400" width="960" height="400" alt="Image #13" />
-        <figcaption>Image #13</figcaption>
-      </figure>
-    </div>
-    <div class="img-gallery__item">
-      <figure>
-        <img src="https://picsum.photos/id/41/1280/540" width="1280" height="540" alt="Image #14" />
-        <figcaption>Image #14</figcaption>
-      </figure>
-    </div>
-    <div class="img-gallery__item">
-      <figure>
-        <img src="https://picsum.photos/id/52/480/540" width="480" height="540" alt="Image #15" />
-        <figcaption>Image #15</figcaption>
-      </figure>
-    </div>
-    <div class="img-gallery__item">
-      <figure>
-        <img src="https://picsum.photos/id/61/960/960" width="960" height="960" alt="Image #16" />
-        <figcaption>Image #16</figcaption>
-      </figure>
-    </div>
-    <div class="img-gallery__item">
-      <figure>
-        <img src="https://picsum.photos/id/17/1024/768" width="1024" height="768" alt="Image #17" />
-        <figcaption>Image #17</figcaption>
-      </figure>
-    </div>
-    <div class="img-gallery__item">
-      <figure>
-        <img src="https://picsum.photos/id/18/450/400" width="450" height="400" alt="Image #18" />
-        <figcaption>Image #18</figcaption>
-      </figure>
-    </div>
-    <div class="img-gallery__item">
-      <figure>
-        <img src="https://picsum.photos/id/93/1920/1080" width="1920" height="1080" alt="Image #19" />
-        <figcaption>Image #19</figcaption>
-      </figure>
-    </div>
-    <div class="img-gallery__item">
-      <figure>
-        <img src="https://picsum.photos/id/20/1080/1920" width="1080" height="1920" alt="Image #20" />
-        <figcaption>Image #20</figcaption>
-      </figure>
-    </div>
-    <div class="img-gallery__item">
-      <figure>
-        <img src="https://picsum.photos/id/60/500/300" width="500" height="300" alt="Image #21" />
-        <figcaption>Image #21</figcaption>
-      </figure>
-    </div>
-    <div class="img-gallery__item">
-      <figure>
-        <img src="https://picsum.photos/id/70/450/400" width="450" height="400" alt="Image #22" />
-        <figcaption>Image #22</figcaption>
-      </figure>
-    </div>
-  </div>
+<a name="top"></a>
+
+
+
+  <div class="header"><b><center><a href="/"><BR><img src="https://i.imgur.com/4Hvzhaq.png" height="80px"></a><BR>
+
+<div class="navtab" id="fitnav"> <center>
+
+
+
+<a href="/gallery" class="navtab">gallery</a>
+
+
+<a href="/commissions" class="navtab">commissions</a>
+
+<a href="/contact" class="navtab">about/contact</a>
+
+</center>
+
+
+<br><BR>
+
 </div>
-<!-- partial -->
-  <script src='https://unpkg.com/flexmasonry/dist/flexmasonry.js'></script><script  src="./script.js"></script>
 
+</div>
+
+
+<div id="page">
+
+<center><BR><BR>	<img src="https://i.imgur.com/lwASgac.png" width=450px></center>
+
+
+<a name="c"></a>
+
+</div>
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.2.0/jquery.fittext.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="jquery.fittext.js"></script>
+<script>jQuery("#fitnav").fitText(4, { minFontSize: '4px', maxFontSize: '13px' });
+</script>
 </body>
-</html>
+
